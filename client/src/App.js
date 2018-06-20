@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Main from './components/Main'
 // import './App.css';
 // import Landing from './components/Landing';
