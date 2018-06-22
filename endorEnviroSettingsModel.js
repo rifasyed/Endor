@@ -10,14 +10,11 @@ var userSettings = new Schema({
     userID: {
         type: String,
     },
-
     tempOne: {
         type: Number,
-
     },
     tempTwo: {
         type: Number,
-
     },
     hygOne: {
         type: Number,
@@ -25,35 +22,23 @@ var userSettings = new Schema({
     hygTwo: {
         type: Number,
     },
-
     intakeFanState: {
         type: Boolean,
-
     },
-
     exhaustFanState: {
         type: Boolean,
-
     },
-
     humFanState: {
         type: Boolean,
-
     },
-
     lightState: {
         type: Boolean,
-
     },
-
     maxHyg: {
         type: Number,
-
     },
-
     waterTemp: {
         type: Number,
-
     }
 
 });

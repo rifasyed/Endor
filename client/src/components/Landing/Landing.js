@@ -4,6 +4,7 @@ import './Landing.css';
 import Login from '../Login'
 import Title from '../Title'
 import LandingModals from '../LandingModals'
+import ModalContent from '../ModalContent'
 
 const Landing = () => (
 
@@ -21,28 +22,10 @@ const Landing = () => (
 
         {/*Info Modal Buttons*/}
         <LandingModals />
-        {/* <div id="coverTags" className="row">
-            <Col id="gauge" s={4}>
-                <a id="dialBtn" >
-                    <Icon medium className="material-icons">devices</Icon>
-                </a>
-                <h6>DATA MONITORING</h6>
-            </Col>
-            <Col id="mountain" s={4}>
-                <a id="biomeBtn" >
-                    <Icon medium className="material-icons">terrain</Icon>
-                </a>
-                <h6>BIOME SELECTOR</h6>
-            </Col>
-            <Col id="devices" s={4}>
-                <a id="aeroBtn" >
-                    <Icon medium className="material-icons">opacity</Icon>
-                </a>
-                <h6>AEROPONIC DELIVERY</h6>
-            </Col>
-        </div> */}
+        
         {/*Info Modal Content*/}
         {/*Data Modal*/}
+  
         <div className="row">
             <Col s={12}>
                 <div id="dialTap" className="tap-target black lighten-3" data-activites="dialBtn">
@@ -79,6 +62,9 @@ const Landing = () => (
                 </Col>
             </div>
         </div>
+
+        <ModalContent />
+
         {/*Breadcrumbs*/}
         <div className="row">
             <Col s={12}>
@@ -94,7 +80,7 @@ const Landing = () => (
             </Col>
         </div>
         {/*Login Modal Content*/}
-        <div id="modal1" className="modal">
+        {/* <div id="modal1" className="modal">
             <div className="modal-content">
                 <h4>ENDOR[ <Icon id="logInShield" className="material-icons">verified_user</Icon> ]</h4>
                 <Col s={3}>
@@ -115,7 +101,7 @@ const Landing = () => (
                     <a href="#!" className="modal-close waves-effect waves-green btn-flat">Agree</a>
                 </div>
             </div>
-        </div>
+        </div> */}
 
 
     </div>

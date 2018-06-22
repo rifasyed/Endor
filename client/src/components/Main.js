@@ -3,6 +3,7 @@ import Landing from '../components/Landing';
 import Login from '../components/Login';
 import Title from '../components/Title';
 import LandingModals from '../components/LandingModals';
+import ModalContent from '../components/ModalContent';
 
 class Main  extends Component {
   render() {
@@ -13,6 +14,7 @@ class Main  extends Component {
           <Login />
           <Title />
           <LandingModals />
+          <ModalContent />
           </Landing>
         </Fragment>
       </div>
