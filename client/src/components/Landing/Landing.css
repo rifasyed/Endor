@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../assets/wallhaven-429532.jpg");
+    background-image: url("../../assets/wallhaven-429532.jpg") !important;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -7,6 +7,7 @@ body {
     color: white;
     font-family: 'Exo 2', sans-serif;
   }
+  
   * {
     box-sizing: border-box;
     text-decoration: none;
