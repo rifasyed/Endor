@@ -8,7 +8,7 @@ import ModalContent from '../ModalContent'
 
 const Landing = () => (
 
-    <div>
+<div className='myClass'>
         {/*Login Button*/}
         <div>
             <Login />
@@ -25,6 +25,44 @@ const Landing = () => (
         
         {/*Info Modal Content*/}
         {/*Data Modal*/}
+  
+        <div className="row">
+            <Col s={12}>
+                <div id="dialTap" className="tap-target black lighten-3" data-activites="dialBtn">
+                    <div className="tap-target-content">
+                        <h5 id="realTime">REAL-TIME DATA MONITORING</h5>
+                        <div id="monitorPar">The ENDOR[ <Icon id="smallInfinity" className="material-icons">all_inclusive</Icon> ]Platform provides real-time monitoring of all growth levels including:
+                        <ul>
+                                <li>Temperature</li>
+                                <li>Humidity</li>
+                                <li>Light Spectrum</li>
+                                <li>Growth Cycle</li>
+                                <li>PH (H2O)</li>
+                                <li>Nutrient Levels (H2O)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </Col>
+            {/*Biome Modal*/}
+            <div className="row">
+                <Col s={12}>
+                    <div id="biomeTap" className="tap-target black lighten-3" data-activates="biomeBtn">
+                        <div id="biomeContent" className="tap-target-content">
+                            <h5>BIOME SELECTOR</h5>
+                            <div id="biomeParagraph">The ENDOR[ <Icon id="smallInfinity" className="material-icons">all_inclusive</Icon> ] Biome Selector provides an easy way to set the environment parameters for your growth cycle. Pre-Set Biomes Include:
+                            <ul>
+                                    <li>Desert (10-20% Humidity)</li>
+                                    <li>Ocean (40-60% Humidity)</li>
+                                    <li>Forest (70-80% Humidity)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </Col>
+            </div>
+        </div>
+
         <ModalContent />
 
         {/*Breadcrumbs*/}
