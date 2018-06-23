@@ -9,7 +9,7 @@ const biomTitle = () => (
         ENDOR [ <Icon className="material-icons">filter_hdr</Icon> ]
 </h1>
     <h5 id="biomWord">
-    Biom Selector
+    BIOME SELECTOR
     </h5>
 </Col>
 </div>

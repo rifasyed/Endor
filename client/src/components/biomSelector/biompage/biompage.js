@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { Icon, Col } from 'react-materialize';
 import './biomPage.css';
 
@@ -7,13 +7,7 @@ import biomTitle from '../biomTitle';
 
 
 const biomPage = () => (
-
-    <div id="endorLogo" className="row">
-        <Col s={12}>
-            <h1 id="endorWord"> ENDOR [<i className="material-icons">filter_hdr</i> ] </h1>
-            <h5 id="biomWord"> BIOME SELECTOR</h5>
-        </Col>
-    </div>
+    <Fragment>
     <div className="row">
         <div id="desertBox">
             <Col s={4}>
@@ -43,7 +37,7 @@ const biomPage = () => (
             <h5 class="biomeTitle" >FOREST</h5>
         </Col>
     </div>
-
+    </Fragment>
 
 
 )
