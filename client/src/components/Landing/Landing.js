@@ -8,7 +8,7 @@ import ModalContent from '../ModalContent'
 
 const Landing = () => (
 
-<div className='myClass'>
+<div className='landingBG'>
         {/*Login Button*/}
         <div>
             <Login />

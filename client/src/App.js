@@ -15,15 +15,12 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        {/* <Dashboard /> */}
-        {/* <h1>Hello World!</h1> */}
-       <Router>
-         <div>
-            
-             <Route exact path="/" component={Main} />
-             <Route exact path="/dashboard" component={Dashboard} />
-       </div>
-           </Router>
+        <Router>
+          <div>
+            <Route exact path="/" component={Main} />
+            <Route exact path="/dashboard" component={Dashboard} />
+          </div>
+        </Router>
       </Fragment>
     )
   }

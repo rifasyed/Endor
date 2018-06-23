@@ -5,18 +5,16 @@ import Title from '../components/Title';
 import LandingModals from '../components/LandingModals';
 import ModalContent from '../components/ModalContent';
 
-class Main  extends Component {
+class Main extends Component {
   render() {
     return (
       <div>
-        <Fragment>
-          <Landing>
+        <Landing>
           <Login />
           <Title />
           <LandingModals />
           <ModalContent />
-          </Landing>
-        </Fragment>
+        </Landing>
       </div>
 
     )

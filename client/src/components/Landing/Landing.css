@@ -1,5 +1,5 @@
-body {
-    background-image: url("../../assets/wallhaven-429532.jpg") !important;
+.landingBG {
+    background-image: url("../../assets/wallhaven-429532.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
