@@ -4,7 +4,9 @@ import './Landing.css';
 import Login from '../Login'
 import Title from '../Title'
 import LandingModals from '../LandingModals'
-import ModalContent from '../ModalContent'
+
+
+
 
 const Landing = () => (
 
@@ -18,6 +20,7 @@ const Landing = () => (
         {/*Logo*/}
         <div>
             <Title />
+            
         </div>
 
         {/*Info Modal Buttons*/}
@@ -63,7 +66,7 @@ const Landing = () => (
             </div>
         </div>
 
-        <ModalContent />
+        {/* <ModalContent /> */}
 
         {/*Breadcrumbs*/}
         <div className="row">
