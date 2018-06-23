@@ -10,7 +10,7 @@ import LandingModals from '../LandingModals'
 
 const Landing = () => (
 
-<div className='myClass'>
+<div className='landingBG'>
         {/*Login Button*/}
         <div>
             <Login />

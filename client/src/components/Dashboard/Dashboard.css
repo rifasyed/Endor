@@ -1,4 +1,4 @@
-body {
+.dashboardBG {
     background-image: url("../../assets/background-background-image-clear-sky-1054222.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -6,4 +6,20 @@ body {
     background-size: cover;
     color: white;
     font-family: 'Exo 2', sans-serif;
+    /* height: 100vh; */
   }
+
+.dashHead {
+  margin-top: 0;
+}
+
+.side-nav {
+  width: 16%; 
+}
+
+.material-icons {
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+}
