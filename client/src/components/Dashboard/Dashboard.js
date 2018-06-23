@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col, Card, CardPanel, CardTitle, SideNav, SideNavItem, Button, Icon } from 'react-materialize'
+// import { DrawerNavigator} from 'react-navigation'
 import './Dashboard.css'
 
 const Dashboard = () => (
@@ -29,25 +30,25 @@ const Dashboard = () => (
         <div className="dashDivMain">
           <Row>
             <Col m={3} s={12}>
-              <Icon large>insert_chart</Icon>
+              <Icon medium className="dashIcons">insert_chart</Icon>
               <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
                 I am a very simple card.
               </Card>
             </Col>
             <Col m={3} s={12}>
-              <Icon large>insert_chart</Icon>
+              <Icon medium className="dashIcons">insert_chart</Icon>
               <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
                 I am a very simple card.
               </Card>
             </Col>
             <Col m={3} s={12}>
-              <Icon large>insert_chart</Icon>
+              <Icon medium className="dashIcons">insert_chart</Icon>
               <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
                 I am a very simple card.
               </Card>
             </Col>
             <Col m={3} s={12}>
-              <Icon large>insert_chart</Icon>
+              <Icon medium className="dashIcons">insert_chart</Icon>
               <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
                 I am a very simple card.
               </Card>
