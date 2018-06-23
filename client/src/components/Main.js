@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Landing from '../components/Landing';
 import Login from '../components/Login';
 import Title from '../components/Title';
@@ -13,9 +13,7 @@ class Main extends Component {
           <Login />
           <Title />
           <LandingModals />
-          <ModalContent />
           </Landing>
-        </Fragment>
       </div>
 
     )

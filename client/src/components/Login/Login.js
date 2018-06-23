@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal, Icon, Col, Button } from 'react-materialize';
+import { Icon, Col } from 'react-materialize';
 import './Login.css';
 
 const Login = () => (
