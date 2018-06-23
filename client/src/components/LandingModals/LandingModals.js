@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Col, Modal } from 'react-materialize';
+import { Icon, Col } from 'react-materialize';
 import './LandingModals.css';
 import ModalContent from '../ModalContent'
 
