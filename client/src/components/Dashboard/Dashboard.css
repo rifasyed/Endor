@@ -1,12 +1,12 @@
 .dashboardBG {
-    background-image: url("../../assets/background-background-image-clear-sky-1054222.jpg");
+    background-image: url("../../assets/wallhaven-429532.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
     background-size: cover;
     color: white;
     font-family: 'Exo 2', sans-serif;
-    /* height: 100vh; */
+    height: 100%;
   }
 
 .dashHead {
@@ -17,7 +17,7 @@
   width: 16%; 
 }
 
-/* .material-icons {
+.dashIcons {
   margin: 0;
   position: absolute;
   z-index: 1;
