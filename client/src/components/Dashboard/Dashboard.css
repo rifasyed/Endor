@@ -27,6 +27,9 @@
   background-color: red; 
 }
 
-.test {
-  font-size: 18px;
+.dashIcons {
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
 }

@@ -1,14 +1,18 @@
 import React from 'react'
-import { Icon, Col } from 'react-materialize';
+import { Icon, Col, Modal } from 'react-materialize';
 import './Login.css';
 
 const Login = () => (
     <div>
         <div className="row">
             <div className="col offset-s10">
-                <a id="logInButton" className="waves-effect waves-red btn modal-trigger" href="#modal1">
-                    LOG IN [ <i id="logInShield" className="material-icons">verified_user</i> ]
-    </a>
+            <Modal trigger={
+                <a id="logInButton" className="waves-effect waves-red btn modal-trigger" href="modal1">
+                LOG IN [ <i id="logInShield" className="material-icons">verified_user</i> ]
+                </a>
+            }
+            />
+            
                 <div id="modal1" className="modal">
                     <div className="modal-content">
                         <h4>ENDOR[ <Icon id="logInShield" className="material-icons">verified_user</Icon> ]</h4>
