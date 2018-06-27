@@ -1,5 +1,5 @@
 .dashboardBG {
-    background-image: url("../../assets/wallhaven-429532.jpg");
+    background-image: url("../../assets/clouds-cold-dark-540518.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -17,9 +17,16 @@
   width: 16%; 
 }
 
-.dashIcons {
-  margin: 0;
-  position: absolute;
-  z-index: 1;
-  background-color: white;
-} */
+#navBtn {
+  position: fixed;
+  top: 3%;
+  left: 2%;
+  background-color: a00800;
+}
+.btn:focus{ 
+  background-color: red; 
+}
+
+.test {
+  font-size: 18px;
+}
