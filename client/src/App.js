@@ -4,9 +4,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Main from './components/Main.js'
 import Dashboard from './components/Dashboard';
 import ChartJS from './components/Chart';
+import BiomeSelect from './components/BiomeSelect';
 import RTChart from './components/RTChart';
-import BiomeSelector from './components/BiomeSelector'
-
 
 // import './App.css';
 // import Landing from './components/Landing';
@@ -24,8 +23,8 @@ class App extends Component {
             <Route exact path="/" component={Main} />
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/chart" component={ChartJS} />
+            <Route exact path="/biomeSelect" component={BiomeSelect} />
             <Route exact path="/rtchart" component={RTChart} />
-            <Route exact path="/biome" component={BiomeSelector} />
           </div>
         </Router>
       </Fragment>

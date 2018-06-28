@@ -21,6 +21,7 @@
     "bcrypt": "^2.0.1",
     "chart.js": "^2.7.2",
     "express": "^4.15.4",
+    "johnny-five": "^0.15.0",
     "react": "^16.4.1",
     "react-chartjs": "^1.2.0",
     "react-chartjs-2": "^2.7.2",

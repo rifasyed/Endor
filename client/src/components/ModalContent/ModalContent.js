@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, Icon, Col } from 'react-materialize';
-import './ModalContent.css'
+import './ModalContent.css';
 
 
 
@@ -24,4 +24,4 @@ const ModalContent = props => {
 }
 
 
-export default ModalContent
+export default ModalContent;
