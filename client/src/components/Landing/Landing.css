@@ -132,13 +132,13 @@
     margin-top: 500px;
   }
   #logInButton {
-    background-color: rgba(138, 138, 138, 0);    
+    /* background-color: rgba(138, 138, 138, 0);    
     margin: 0 auto;
     position: relative;
     opacity: 0.85;
     background-position: center;
     border-width: 2px;
-    box-shadow: none;
+    box-shadow: none; */
   }
   #endorWord {
     margin-top: 10px
