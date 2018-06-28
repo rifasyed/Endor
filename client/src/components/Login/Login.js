@@ -20,7 +20,7 @@ const Login = () => (
                                     <label htmlFor="icon_prefix">PASSWORD</label>
                                 </div>
                                 <div id="modfoot">
-                                    <a href="#!" className="modal-close waves-effect btn-flat">Jordan is  Dick</a>
+                                    <a href="#!" className="modal-close waves-effect btn-flat">AGREE</a>
                                 </div>
                         </Col>
                 </Modal>
