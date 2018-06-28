@@ -9,7 +9,7 @@ const LandingModals = props => (
 <div id="coverTags" className="row">
 <Col id="gauge" s={4}>
         <ModalContent iconClicker={
-        <a id="dialBtn" className="tap-target-content">
+        <a id="dialBtn">
         <Icon medium className="material-icons">devices</Icon>
         </a>
         }
@@ -22,7 +22,7 @@ const LandingModals = props => (
 </Col>
 <Col id="mountain" s={4}>
         <ModalContent iconClicker={
-        <a id="biomeBtn" className="tap-target-content">
+        <a id="biomeBtn">
         <Icon medium className="material-icons">terrain</Icon>
         </a>
         }
@@ -35,7 +35,7 @@ const LandingModals = props => (
 </Col>
 <Col id="devices" s={4}>
     <ModalContent iconClicker={
-    <a id="aeroBtn" className="tap-target-content" >
+    <a id="aeroBtn">
         <Icon medium className="material-icons">opacity</Icon>
     </a>
     } 

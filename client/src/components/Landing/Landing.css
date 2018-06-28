@@ -73,12 +73,6 @@
     overflow-y: visible;
     background-position: center;
     border-radius: none;
-    
-    /* margin: 0 auto;
-    opacity: 0.85;
-    border-width: 30px;
-    border-color: red;
-    box-shadow: none; */
   }
   .modal .modal-footer {
     background-color: #00000080
@@ -92,10 +86,6 @@
     color: #fff;
     text-decoration:underline;
   }
-  /* #biomeContent  {
-    left: 200px !important;
-    position: relative;
-  } */
   
   .black {
     background-color: #000000d9 !important;
@@ -131,15 +121,7 @@
     text-align: center;
     margin-top: 500px;
   }
-  #logInButton {
-    /* background-color: rgba(138, 138, 138, 0);    
-    margin: 0 auto;
-    position: relative;
-    opacity: 0.85;
-    background-position: center;
-    border-width: 2px;
-    box-shadow: none; */
-  }
+
   #endorWord {
     margin-top: 10px
   }

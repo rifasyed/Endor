@@ -1,7 +1,7 @@
 #modal_0 {
     width: 400px;
-    height: 265px;
-    background-color: rgba(138, 138, 138, 0); 
+    height: 248px;
+    background-color: rgba(138, 138, 138, 0.144); 
 }
 
 .modal-close {
@@ -20,5 +20,9 @@
 }
 
 #modfoot {
-    background-color: rgba(138, 138, 138, 0); 
+    background-color: rgba(138, 138, 138, 0.027); 
+}
+
+.modal-close {
+    background-color: rgba(138, 138, 138, 0.027); 
 }
