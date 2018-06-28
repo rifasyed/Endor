@@ -3,8 +3,8 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Main from './components/Main.js'
 import Dashboard from './components/Dashboard';
+import ChartJS from './components/Chart';
 import BiomeSelect from './components/BiomeSelect';
-import Chart from './components/Chart';
 import RTChart from './components/RTChart';
 
 // import './App.css';
@@ -22,8 +22,8 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Main} />
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/chart" component={ChartJS} />
             <Route exact path="/biomeSelect" component={BiomeSelect} />
-            <Route exact path="/chart" component={Chart} />
             <Route exact path="/rtchart" component={RTChart} />
           </div>
         </Router>

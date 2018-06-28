@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Bar, Line, Pie } from 'react-chartjs-2';
 
-class Chart extends Component {
+class ChartJS extends Component {
   constructor(props) {
     super(props);
       this.state = {
@@ -17,7 +17,7 @@ class Chart extends Component {
                 75
               ],
               backgroundColor: [
-                'rgba(255, 99, 132, 0.6)',
+              'rgba(255, 99, 132, 0.6)',
               'rgba(54, 162, 235, 0.6)',
               'rgba(75, 192, 192, 0.6)',
               'rgba(255, 99, 132, 0.6)'
@@ -31,7 +31,7 @@ class Chart extends Component {
   render() {
     return (
       <div className="chart">
-        <Bar
+        <Line
           data={this.state.chartData}
 
           options={{
@@ -45,7 +45,7 @@ class Chart extends Component {
   }
 };
 
-export default Chart;
+export default ChartJS;
 
 // import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
@@ -83,4 +83,5 @@ export default Chart;
 
 // ReactDOM.render(<Pie />, document.body)
 
-// export default Pie; 
+// export default Pie;
+//Reefers Beavers 
