@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import 'whatqg-fetch';
+import 'whatwg-fetch';
+import './Auth.css'
 
-import { getFromStorage, setInStorage } from '../../utils/storage'
-import { BADHINTS } from 'dns';
+import { getFromStorage, setInStorage } from '../../utils/storage';
+// import { BADHINTS } from 'dns';
 
-class Home extends Component {
+class Auth extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
       isLoading: true,
       token: '',
-      signUpError: '',
       signInError: '',
       signInEmail: '',
       signInPassword: '',
@@ -31,13 +31,13 @@ class Home extends Component {
 
     this.onSignIn = this.onSignIn.bind(this)
     this.onSignUp = this.onSignUp.bind(this)
-    this.logout = this.logout / bind(this)
+    this.logout = this.logout.bind(this)
 
   }
 
   componentDidMount() {
     const obj = getFromStorage('the_main_app')
-    if (obj && ) obj.token {
+    if (obj && obj.token) {
       const { token } = obj
       // Verify token
       fetch(`/api/account/verify?token= ${token}`)
@@ -112,7 +112,7 @@ class Home extends Component {
 
     // Post request to backend
     fetch('/api/account/signup', {
-      method: 'POST' 
+      method: 'POST',
       body: JSON.stringify({
         firstName: signUpFirstName,
         lastName: signUpLastName,
@@ -155,7 +155,7 @@ class Home extends Component {
 
     // Post request to backend
     fetch('/api/account/signin', {
-      method: 'POST' 
+      method: 'POST',
       body: JSON.stringify({
         email: signInEmail,
         password: signInPassword
@@ -189,7 +189,7 @@ class Home extends Component {
       isLoading: true,
     })
     const obj = getFromStorage('the_main_app')
-    if (obj && ) obj.token {
+    if (obj && obj.token) {
       const { token } = obj
       // Verify token
       fetch(`/api/account/logout?token= ${token}`)
@@ -217,9 +217,14 @@ class Home extends Component {
     const {
       isLoading,
       token,
-      signinError,
+      signInError,
       signInEmail,
-      signInPassword
+      signInPassword,
+      signUpError,
+      signUpFirstName,
+      signUpLastName,
+      signUpEmail,
+      signUpPassword
     } = this.state
 
     if (isLoading) {
@@ -228,11 +233,11 @@ class Home extends Component {
 
     if (!token) {
       return (
-        <div>
+        <div id="authBG">
           <div>
             {
               (signInError) ? (
-                <p>{signinError}</p>
+                <p>{signInError}</p>
               ) : null
             }
             <p>Sign In</p>
@@ -257,7 +262,7 @@ class Home extends Component {
           <div>
             {
               (signUpError) ? (
-                <p>{signinError}</p>
+                <p>{signInError}</p>
               ) : null
             }
             <p>Sign Up</p>
@@ -303,6 +308,6 @@ class Home extends Component {
     )
   }
 }
-}
 
-export default Home;
+
+export default Auth;
