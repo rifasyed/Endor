@@ -81,7 +81,7 @@ function therm1 (){
     logStream.write(new Date().toLocaleString() + ' - ' + this.fahrenheit + '°F\n');
     console.log(this.celsius + "°C", this.fahrenheit + "°F");
 
-    fs.readFile('/Users/nicktarnofsky2018/Desktop/nodebot/log.txt', 'utf-8', function (e, d) {
+    fs.readFile('./log.txt', 'utf-8', function (e, d) {
       if (e) throw e
       let dataArrUnstructured = []
       let dataArr = []
@@ -94,7 +94,7 @@ function therm1 (){
         let dataObject = {
           date: dataArrUnstructured[i].slice(0, dateBenchmark),
           time: dataArrUnstructured[i].slice(dateBenchmark + 2, timeBenchmark - 1),
-          temperature: dataArrUnstructured[i].slice(timeBenchmark + 2, dataArrUnstructured[i].length)
+          temperature: dataArrUnstructured[i].slice(timeBenchmark + 3, dataArrUnstructured[i].length)
         }
         dataArr.push(dataObject)
       }
