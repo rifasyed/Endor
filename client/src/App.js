@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard';
 import BiomeSelect from './components/BiomeSelect';
 import ChartJS from './components/Chart';
 import RTChart from './components/RTChart';
+import Auth from './components/Auth';
 
 // import './App.css';
 // import Landing from './components/Landing';
@@ -25,6 +26,7 @@ class App extends Component {
             <Route exact path="/biomeSelect" component={BiomeSelect} />
             <Route exact path="/chart" component={ChartJS} />
             <Route exact path="/rtchart" component={RTChart} />
+            <Route exact path="/auth" component={Auth} />
           </div>
         </Router>
       </Fragment>
