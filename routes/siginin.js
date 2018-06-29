@@ -19,19 +19,20 @@ module.exports = (app) => {
   /*
   * Sign Up
   */
+  app.get('/test', function (req, res) {
+    res.send('Hello')
+  })
 
-  app.post('./api/account/signup', (req, res, next) => {
-    const { body } = req
-    console.log('body', body)
+
+  app.post('/api/account/signup', (req, res) => {
+    console.log('ping')
     const {
-      fistName,
+      firstName,
       lastName,
+      email,
       password
-    } = body
-    let {
-      email
-    } = body
-
+    } = req.body
+    console.log(req.body.firstName)
     if (!firstName) {
       return res.send({
         success: false,
@@ -87,7 +88,7 @@ module.exports = (app) => {
       newUser.firstName = firstName
       newUser.lastName = lastName
       newUser.password = newUser.generateHasH(password)
-      newUser.save((err, user) =>) {
+      newUser.save((err, user) => {
         if (err) {
           return res.send({
             success: false,
@@ -98,7 +99,7 @@ module.exports = (app) => {
           success: true,
           message: 'Sign up successful'
         })
-      }
+      })
     })
   })
 
@@ -106,7 +107,7 @@ module.exports = (app) => {
   * SIGNIN
   */
 
-  app.post('./api/account/signin', (req, res, next) => {
+  app.post('/api/account/signin', (req, res, next) => {
     const { body } = req
     const {
       password
@@ -180,7 +181,7 @@ module.exports = (app) => {
   * VERIFY
   */
 
-  app.get('./api/account/verify', (req, res, next) => {
+  app.get('/api/account/verify', (req, res, next) => {
     // Get token
     const { query } = req
     const { token } = query
@@ -238,12 +239,12 @@ module.exports = (app) => {
           success: false,
           message: 'Error: Server Error'
         })
+      } else {
+        return res.send({
+          success: true,
+          message: 'Good'
+        })
       }
-      return res.send({
-        success: true,
-        message: 'Good'
-      })
-    }
     })
   })
 }
