@@ -4,7 +4,7 @@ import './Title.css';
 
 const Title = () => (
 <div className="row" id="endorLogo">
-<Col className="fadeInDown animated" s={12}>
+<Col className="zoomInDown" id="animated" s={12}>
     <h1 id="endorWord">
         ENDOR [ <Icon className="material-icons">all_inclusive</Icon> ]
 </h1>
