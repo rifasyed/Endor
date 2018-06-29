@@ -22,6 +22,7 @@ module.exports = (app) => {
 
   app.post('./api/account/signup', (req, res, next) => {
     const { body } = req
+    console.log('body', body)
     const {
       fistName,
       lastName,
@@ -133,7 +134,7 @@ module.exports = (app) => {
       email: email
     }, (err, users) => {
       if (err) {
-        console.log(`Err 2: ${err }`)
+        console.log(`Err 2: ${err}`)
         return res.send({
           success: false,
           message: 'Error: Server Error'
@@ -179,6 +180,70 @@ module.exports = (app) => {
   * VERIFY
   */
 
-  app.post('./api/account/verify', (req, res, next) => {}
+  app.get('./api/account/verify', (req, res, next) => {
+    // Get token
+    const { query } = req
+    const { token } = query
+    // ?token=test
 
+    // Verify token is one of a kind and not deleted
+
+    UserSession.find({
+      _id: token,
+      isDeleted: false
+    }, (err, sessions) => {
+      if (err) {
+        console.log(err)
+        return res.send({
+          success: false,
+          message: 'Error: Server Error'
+        })
+      }
+      if (sessions.length !== 1) {
+        return res.send({
+          success: false,
+          message: 'Error: Invalid'
+        })
+      } else {
+        return res.send({
+          success: true,
+          message: 'Good'
+        })
+      }
+    })
+  })
+
+  /*
+  * VERIFY
+  */
+
+  app.get('/api/account/logout', (req, res, next) => {
+    // Get token
+    const { query } = req
+    const { token } = query
+    // ?token=test
+
+    // Verify token is one of a kind and not deleted
+
+    UserSession.findOneAndUpdate({
+      _id: token,
+      isDeleted: false
+    }, {
+      $set: { 
+        isDeleted: true }
+    }, null, (err, sessions) => {
+      if (err) {
+        console.log(err)
+        return res.send({
+          success: false,
+          message: 'Error: Server Error'
+        })
+      }
+      return res.send({
+        success: true,
+        message: 'Good'
+      })
+    }
+    })
+  })
 }
