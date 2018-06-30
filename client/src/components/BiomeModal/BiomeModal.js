@@ -1,15 +1,15 @@
 import React from 'react';
 import { Icon, Col } from 'react-materialize';
-import './Modal.css';
-import BiomeModal from '../BiomeModal'
+import './BiomeModal.css';
+import ModalAnimation from '../ModalAnimation'
 
 
 
 const BiomeModal = props => (
 <div id="coverTags" className="row">
-<Col id="gauge" s={4}>
-        <BiomeModal iconClicker={
-        <a id="dialBtn" className="tap-target-content">
+<Col id="desertIcon" s={4}>
+        <ModalAnimation iconClicker={
+        <a id="dialBtn">
         <Icon medium className="material-icons">devices</Icon>
         </a>
         }
@@ -18,11 +18,11 @@ const BiomeModal = props => (
          description="Platform provides real-time monitoring of all growth levels including:"
          list={["Temperature", "Humidity", "Light Spectrum", "Growth Cycle", "PH (H20)", "Nutrient Levels (H20)"]}
         />
-    <h6>DESERT</h6>
+   <span className="modalnames">DESERT</span>
 </Col>
-<Col id="mountain" s={4}>
-        <BiomeModal iconClicker={
-        <a id="biomeBtn" className="tap-target-content">
+<Col id="oceanIcon" s={4}>
+        <ModalAnimation iconClicker={
+        <a id="biomeBtn">
         <Icon medium className="material-icons">terrain</Icon>
         </a>
         }
@@ -31,11 +31,11 @@ const BiomeModal = props => (
         description="Platform provides real-time monitoring of all growth levels including:"
         list={["Temperature", "Humidity", "Light Spectrum", "Growth Cycle", "PH (H20)", "Nutrient Levels (H20)"]}
         />
-    <h6>OCEAN</h6>
+  <span className="modalnames">OCEAN</span>
 </Col>
-<Col id="devices" s={4}>
-    <BiomeModal iconClicker={
-    <a id="aeroBtn" className="tap-target-content" >
+<Col id="forestIcon" s={4}>
+    <ModalAnimation iconClicker={
+    <a id="aeroBtn">
         <Icon medium className="material-icons">opacity</Icon>
     </a>
     } 
@@ -44,7 +44,7 @@ const BiomeModal = props => (
     description="Platform provides real-time monitoring of all growth levels including:"
     list={["Temperature", "Humidity", "Light Spectrum", "Growth Cycle", "PH (H20)", "Nutrient Levels (H20)"]}
     />
-    <h6>FOREST</h6>
+ <span className="modalnames">FOREST</span>
 </Col>
 </div>
 )

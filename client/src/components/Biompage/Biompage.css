@@ -132,12 +132,13 @@ vertical-align: top;
 
 
 
-body {
+ .Bpage {
     background-image: url("../../assets/wallhaven-429530.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
     background-size: cover;
+    height: 100vh;
     /* background-color: rgb(15, 15, 15); */
     color: white;
     font-family: 'Exo 2', sans-serif;
@@ -235,6 +236,9 @@ vertical-align: top;
 #username {
     color: white;
 }
+#coverTags {
+    margin-top: 450px;
+  }
 #desertImg {
     width: 600px;
     height: auto;
@@ -289,3 +293,27 @@ vertical-align: top;
     text-align: center;
 }
 
+#imagebuttonone{
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+}
+#imagebuttontwo{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+#imagebuttonthree{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
