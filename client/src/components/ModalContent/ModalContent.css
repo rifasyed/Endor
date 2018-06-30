@@ -3,6 +3,10 @@
     height: 300px;
 }
 
+.modal-close:hover {
+  background-color: rgba(138, 138, 138, 0);
+}
+
 .btn,
 .modal-footer {
    background-color: rgba(138, 138, 138, 0); 
