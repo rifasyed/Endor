@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Col, Button } from 'react-materialize';
+import { Icon, Col, Button, Row } from 'react-materialize';
 import './Landing.css';
 import Login from '../Login'
 import Title from '../Title'
@@ -11,7 +11,7 @@ import LandingModals from '../LandingModals'
 const Landing = () => (
 
     <div className='landingBG'>
-        {/*Login Button*/}
+        {/*Login*/}
         <div>
             <Login />
 
@@ -39,11 +39,11 @@ const Landing = () => (
         <div className="row">
 
         </div>
-        <div id="newProfile" className="row">
+        <Row id="newProfile">
             <Col s={12}>
-                <Button large className="newProfBtn"><Icon id="addIcon" left>note_add</Icon>New Profile</Button>
+                <Button large className="newProfBtn"><Icon id="addIcon" left>note_add</Icon>New Project</Button>
             </Col>  
-        </div>
+        </Row>
         {/*Login Modal Content*/}
 
 

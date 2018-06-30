@@ -1,13 +1,13 @@
 import React from 'react'
-import { Icon, Col, Modal, Button } from 'react-materialize';
+import { Icon, Col, Modal, Button, Row } from 'react-materialize';
 import './Login.css';
 
 const Login = () => (
     <div>
-        <div className="row">
+        <Row>
             <div className="col offset-s10">
                 <Modal  
-                    trigger={<Button id="loginBtn"> LOG IN <Icon id="logInShield" className="material-icons">verified_user</Icon></Button>}>
+                    trigger={<Button icon="verified_user" className="loginBtn"> LOG IN </Button>}>
                         <Col s={3}>
                                 <div id="username" className="input-field">
                                     <Icon className="material icons prefix">vpn_key</Icon>
@@ -25,7 +25,7 @@ const Login = () => (
                         </Col>
                 </Modal>
             </div>
-        </div>
+        </Row>
     </div>
 )
 

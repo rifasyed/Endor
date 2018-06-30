@@ -13,14 +13,18 @@
     background-color: rgba(138, 138, 138, 0);
 }
 
-#loginBtn {
-    background-color: rgba(138, 138, 138, 0);    
+.loginBtn {
+    background-color: rgba(138, 138, 138, 0.027); 
     margin: 0 auto;
     position: relative;
     opacity: 0.85;
     background-position: center;
     border-width: 2px;
     box-shadow: none;
+}.loginBtn:hover {
+    background-color: rgba(138, 138, 138, 0.027); 
+}.loginBtn:focus {
+    background-color: rgba(138, 138, 138, 0) !important;
 }
 
 #modfoot {
