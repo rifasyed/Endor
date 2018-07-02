@@ -2,7 +2,8 @@ import React from 'react';
 import { Row, Col, Card, CardPanel, CardTitle, SideNav, SideNavItem, Button, Icon } from 'react-materialize'
 // import { DrawerNavigator} from 'react-navigation'
 import Chart from '../Chart/ChartJS';
-import './Dashboard.css'
+import axios from 'axios';
+import './Dashboard.css';
 
 const Dashboard = () => (
   <div className='dashboardBG'>
