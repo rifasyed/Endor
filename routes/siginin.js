@@ -58,8 +58,6 @@ module.exports = (app) => {
       })
     }
 
-    console.log('here')
-
     email = email.toLowerCase()
 
     // STEPS

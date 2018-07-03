@@ -96,12 +96,16 @@ class Auth extends Component {
     fetch('/api/account/signup', {
       method: 'POST',
       body: {
-        firstName: this.state.signUpFirstName,
+        firstName: this.state.signUpFirstName, 
         lastName: this.state.signUpLastName,
         email: this.state.signUpEmail,
         password: this.state.signUpPassword
       }
     })
+    // console.log(this.state.signUpFirstName)
+    // console.log(this.state.signUpLastName)
+    // console.log(this.state.signUpEmail)
+    // console.log(this.state.signUpPassword)
       // .then(res => res.json())
       .then(json => {
         console.log('json', json)
