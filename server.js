@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
-app.use('/tempPort', TempRouter)
+require('./routes/TempRouter')(app)
 require('./routes/siginin')(app)
 
 mongoose.connect('mongodb://localhost/Endor').then(
