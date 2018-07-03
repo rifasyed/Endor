@@ -3,20 +3,12 @@ import axios from 'axios';
 
 
 class ChartTest extends Component {
-
-    constructor(props) {
-        super(props);
-        this.
-        // this.onChangeHostName = this.onChangeHostName.bind(this);
-        // this.onChangePort = this.onChangePort.bind(this);
-        // this.onSubmit = this.onSubmit.bind(this);
-
-        this.state = {
-            date: '',
-            time: '',
-            temperature: ''
-        }
+    state = {
+        date: '',
+        time: '',
+        temperature: ''
     }
+
     onChangeHostName(e) {
         this.setState({
             name: e.target.value
@@ -45,10 +37,19 @@ class ChartTest extends Component {
     }
 
     componentDidMount() {
+        axios.get('/data').then(r => {
+            console.log(r)
+        })
+        .catch(e => {
+            console.error(`Axios Request to /tempPort/ ${e}`)
+        })
+
+
+        
         axios.post('/api/temp1')
             .then(res => {
-                this.setState({ date: res.data.date})
-                console.log(this.state.date)
+                this.setState({ datas: res.data.date})
+                console.log(this.state.datas)
             })
     }
 
