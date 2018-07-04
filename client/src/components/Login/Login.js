@@ -7,7 +7,7 @@ const Login = () => (
         <Row>
             <div className="col offset-s10">
                 <Modal  
-                    trigger={<Button className="loginBtn"> L O G I N <Icon>how_to_reg</Icon></Button>}>
+                    trigger={<Button className="loginBtn"> L O G I N <Icon>how_to_reg0</Icon></Button>}>
                         <Col s={3}>
                                 <div id="username" className="input-field">
                                     <Icon className="material icons prefix">vpn_key</Icon>

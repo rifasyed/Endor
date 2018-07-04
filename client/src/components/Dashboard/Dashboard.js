@@ -33,9 +33,9 @@ const Dashboard = () => (
           <Row>
             <Col m={3} s={12}>
               <h5>
-                TEMP 1 [ <Icon>ac_unit</Icon> ]
+                TEMP 1 [ <Icon className="iconSize">ac_unit</Icon> ]
               </h5>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
+              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title'>
               <Chart />
               </Card>
             </Col>
@@ -43,7 +43,7 @@ const Dashboard = () => (
               <h5>
                 TEMP 2 [ <Icon>flare</Icon> ]
               </h5>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
+              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title'>
                 I am a very simple card.
               </Card>
             </Col>
@@ -51,7 +51,7 @@ const Dashboard = () => (
               <h5>
                 HUMIDITY [ <Icon>cloud_queue</Icon> ]
               </h5>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
+              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title'>
                 I am a very simple card.
               </Card>
             </Col>
@@ -59,7 +59,7 @@ const Dashboard = () => (
               <h5>
                 WATER TEMP [ <Icon>invert_colors</Icon> ]
               </h5>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href={Chart}>Chart</a>]}>
+              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title'>
                 I am a very simple card.
               </Card>
             </Col>
@@ -67,7 +67,7 @@ const Dashboard = () => (
 
           <Row>
             <Col m={12} s={12}>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
+              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title'>
                 I am a very simple card.
               </Card>
             </Col>
@@ -75,12 +75,12 @@ const Dashboard = () => (
 
           <Row>
             <Col m={6} s={12}>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
+              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title'>
                 I am a very simple card.
               </Card>
             </Col>
             <Col m={6} s={12}>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
+              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title'>
                 I am a very simple card.
               </Card>
             </Col>
