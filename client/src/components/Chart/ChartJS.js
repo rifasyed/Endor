@@ -12,8 +12,8 @@ class ChartJS extends Component {
       tempArr: []
   }
 
-   componentDidMount() {
-    getData()
+  componentDidMount() {
+    this.getData()
 
     this.interval = setInterval(this.getData, 1000)
   }
@@ -37,6 +37,34 @@ class ChartJS extends Component {
       console.log(`My Error ${e}`)
     })
   }
+
+  // or =====================================
+  // componentDidMount() {
+  //   this.intervalId = setInterval(() => this.loadData(), 3600000);
+  //   this.loadData(); // also load one immediately
+  // }
+
+  // getData = () => {
+  //   if (this.props)
+  //   let dateArr = this.state.dateArr
+  //   let timeArr = this.state.timeArr
+  //   let tempArr = this.state.tempArr
+  //   axios.get('/data')
+  //     .then(r => {
+  //       for (let i = 0; i < r.data.length; i++) {
+  //         dateArr.push(r.data[i].date)
+  //         timeArr.push(r.data[i].time)
+  //         tempArr.push(r.data[i].temperature)
+  //       }
+  //       console.log(dateArr)
+  //       console.log(timeArr)
+  //       console.log(tempArr)
+  //       this.setState({ dateArr, timeArr, tempArr })
+  //     }).catch(e => {
+  //       console.log(`My Error ${e}`)
+  //     })
+  // }
+
   // constructor(props) {
   //   super(props);
   //     this.state = {
