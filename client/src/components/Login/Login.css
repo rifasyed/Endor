@@ -1,0 +1,28 @@
+#modal_0 {
+    width: 400px;
+    height: 248px;
+    background-color: rgba(138, 138, 138, 0.144); 
+}
+
+.modal-close {
+    color: white;
+    background-color: rgba(138, 138, 138, 0); 
+}
+
+#loginBtn {
+    background-color: rgba(138, 138, 138, 0);    
+    margin: 0 auto;
+    position: relative;
+    opacity: 0.85;
+    background-position: center;
+    border-width: 2px;
+    box-shadow: none;
+}
+
+#modfoot {
+    background-color: rgba(138, 138, 138, 0.027); 
+}
+
+.modal-close {
+    background-color: rgba(138, 138, 138, 0.027); 
+}

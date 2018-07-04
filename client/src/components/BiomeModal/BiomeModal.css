@@ -1,0 +1,156 @@
+
+  
+  * {
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+  }
+  i {
+    color: #a00800;
+    font-family: 'Exo 2', sans-serif;
+  }
+/*   
+  .modalnames {
+    font-size: 30px;
+  } */
+  
+  /* ///////////////////////////////////////////////////////// */
+
+  /* keep material icon */
+  .material-icons {
+    font-size: 40px;
+    padding: none;
+    }
+
+  .input-field label {
+    color: white
+  }
+  .input-field {
+    color:white;
+  }
+  .input-field .prefix.active {
+    color: white;
+  }
+  .input-field input[type=text]:focus + label {
+    color: #000;
+  }
+  .input-field input[type=text]:not(.browser-default) {
+    border-bottom: 1px solid #a00800;
+    color: white;
+  }
+  .input-field textarea[class=materialize-textarea]:focus {
+   color: white;
+  }
+  .input-field input:focus + label {
+    color: #a00800 !important;
+  }
+  .row .input-field input:focus {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important
+  }
+  p.form-title {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    letter-spacing: 4px;
+    width: 300px;  
+  }
+  .modal{
+    background-color: rgba(96, 96, 96, 0.454);  
+    margin-top: 150px;
+    width: 45%;
+    height: 55%;
+    position: fixed;
+    transform: none;
+    overflow-y: visible;
+    background-position: center;
+    border-radius: none;
+  }
+  .modal .modal-footer {
+    background-color: #00000080
+  
+  }
+  .tap-target {
+    color: #fff;
+    background-color: rgba(96, 96, 96, 0.509); 
+  }
+  a {
+    color: #fff;
+    text-decoration:underline;
+  }
+  
+  .black {
+    background-color: #000000d9 !important;
+  }
+  .tap-target-wave::before {
+    background-color: black;
+  
+  }
+  .tap-target-wave::after {
+    background-color: #00000029;
+  }
+  
+  /* //////////////////////////////////////////////////// */
+  
+  
+  /* #logInBox {
+    background-color: rgba(41, 42, 50, 0);
+    position: relative;
+    width: 300px;
+    color: white
+  } */
+  #endorLogo {
+    max-width: 100%;
+    margin: 80px auto;
+    height: 40px;
+    text-align: center;
+    margin-top: 1px;
+  }
+  /* #newProfile {
+    max-width: 100%;
+    margin: 80px auto;
+    height: 40px;
+    text-align: center;
+    margin-top: 500px;
+  } */
+
+  /* #endorWord {
+    margin-top: 10px
+  } */
+  /* #username {
+    color: white;
+  } */
+  /* #profileBtn {
+    font-size: 25px;
+    color: #a00800;
+  } */
+  #coverTags {
+    margin-top: 450px;
+  }
+  /* changed name "gauge" */
+  #desertIcon {
+    text-align: center;
+  }
+  /* changed name "mountain" */
+  #oceanIcon{
+    text-align: center;
+  }
+  /* changed name "devices" */
+  #forestIcon {
+    text-align: center;
+  }
+  #smallInfinity {
+    font-size: 15px;
+  }
+  #realTime {
+    /* text-align: center; */
+    right: 100px;
+    position: relative;
+  }
+  #monitorPar {
+    /* text-align: center; */
+    right: 100px;
+    position: relative;
+  }
+  

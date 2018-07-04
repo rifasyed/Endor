@@ -9,7 +9,7 @@ const LandingModals = props => (
 <div id="coverTags" className="row">
 <Col id="gauge" s={4}>
         <ModalContent iconClicker={
-        <a id="dialBtn" className="tap-target-content">
+        <a id="dialBtn">
         <Icon medium className="material-icons">devices</Icon>
         </a>
         }
@@ -18,11 +18,11 @@ const LandingModals = props => (
          description="Platform provides real-time monitoring of all growth levels including:"
          list={["Temperature", "Humidity", "Light Spectrum", "Growth Cycle", "PH (H20)", "Nutrient Levels (H20)"]}
         />
-    <h6>DATA MONITORING</h6>
+    <span className="modalnames">DATA MONITORING</span>
 </Col>
 <Col id="mountain" s={4}>
         <ModalContent iconClicker={
-        <a id="biomeBtn" className="tap-target-content">
+        <a id="biomeBtn">
         <Icon medium className="material-icons">terrain</Icon>
         </a>
         }
@@ -31,11 +31,11 @@ const LandingModals = props => (
         description="Platform provides real-time monitoring of all growth levels including:"
         list={["Temperature", "Humidity", "Light Spectrum", "Growth Cycle", "PH (H20)", "Nutrient Levels (H20)"]}
         />
-    <h6>BIOME SELECTOR</h6>
+    <span className="modalnames">BIOME SELECTOR</span>
 </Col>
 <Col id="devices" s={4}>
     <ModalContent iconClicker={
-    <a id="aeroBtn" className="tap-target-content" >
+    <a id="aeroBtn">
         <Icon medium className="material-icons">opacity</Icon>
     </a>
     } 
@@ -44,7 +44,7 @@ const LandingModals = props => (
     description="Platform provides real-time monitoring of all growth levels including:"
     list={["Temperature", "Humidity", "Light Spectrum", "Growth Cycle", "PH (H20)", "Nutrient Levels (H20)"]}
     />
-    <h6>AEROPONIC DELIVERY</h6>
+    <span className="modalnames">AEROPONIC DELIVERY</span>
 </Col>
 </div>
 )

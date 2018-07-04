@@ -3,8 +3,14 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Main from './components/Main.js'
 import Dashboard from './components/Dashboard';
-// biomselector folder//
-// import Dashboard from './components/biomSelector';
+import BiomeSelect from './components/BiomeSelect';
+import ChartJS from './components/Chart';
+import RTChart from './components/RTChart';
+import Auth from './components/Auth';
+import RSelect from './components/RSelect';
+// import FBig from './components/FBig';
+
+// import Test from './components/Test';
 
 // import './App.css';
 // import Landing from './components/Landing';
@@ -21,6 +27,13 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Main} />
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/biomeSelect" component={BiomeSelect} />
+            <Route exact path="/chart" component={ChartJS} />
+            <Route exact path="/rtchart" component={RTChart} />
+            <Route exact path="/auth" component={Auth} />
+            <Route exact path="/rselect" component={RSelect} />
+            {/* <Route exact path="/fbig" component={FBig} /> */}
+            {/* <Route exact path="/test" component={Test} /> */}
           </div>
         </Router>
       </Fragment>

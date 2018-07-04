@@ -1,14 +1,15 @@
 import React from 'react';
 import { Row, Col, Card, CardPanel, CardTitle, SideNav, SideNavItem, Button, Icon } from 'react-materialize'
 // import { DrawerNavigator} from 'react-navigation'
+import Chart from '../Chart/ChartJS';
 import './Dashboard.css'
 
 const Dashboard = () => (
   <div className='dashboardBG'>
-    <h1 className="dashHead">Endor Dashboard</h1>
+    <h1 className="dashHead">DASHBOARD</h1>
     <Row>
       <SideNav
-      // trigger={<Button>SIDE NAV DEMO</Button>}
+      // trigger={<Button floating large icon="add" id="navBtn"></Button>}
       // options={{ closeOnClick: true }}
       >
         <SideNavItem userView
@@ -30,47 +31,47 @@ const Dashboard = () => (
         <div className="dashDivMain">
           <Row>
             <Col m={3} s={12}>
-              <Icon medium className="dashIcons">insert_chart</Icon>
+              <h5>
+                TEMP 1 [ <Icon>ac_unit</Icon> ]
+              </h5>
+              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
+              <Chart />
+              </Card>
+            </Col>
+            <Col m={3} s={12}>
+              <h5>
+                TEMP 2 [ <Icon>flare</Icon> ]
+              </h5>
               <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
                 I am a very simple card.
               </Card>
             </Col>
             <Col m={3} s={12}>
-              <Icon medium className="dashIcons">insert_chart</Icon>
+              <h5>
+                HUMIDITY [ <Icon>cloud_queue</Icon> ]
+              </h5>
               <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
                 I am a very simple card.
               </Card>
             </Col>
             <Col m={3} s={12}>
-              <Icon medium className="dashIcons">insert_chart</Icon>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
-                I am a very simple card.
-              </Card>
-            </Col>
-            <Col m={3} s={12}>
-              <Icon medium className="dashIcons">insert_chart</Icon>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
+              <h5>
+                WATER TEMP [ <Icon>invert_colors</Icon> ]
+              </h5>
+              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href={Chart}>Chart</a>]}>
                 I am a very simple card.
               </Card>
             </Col>
           </Row>
+
           <Row>
-            <Col m={4} s={12}>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
-                I am a very simple card.
-              </Card>
-            </Col>
-            <Col m={4} s={12}>
-              <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
-                I am a very simple card.
-              </Card>
-            </Col>
-            <Col m={4} s={12}>
+            <Col m={12} s={12}>
               <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>
                 I am a very simple card.
               </Card>
             </Col>
           </Row>
+
           <Row>
             <Col m={6} s={12}>
               <Card className='blue-grey darken-1' textClassName='white-text' title='Card title' actions={[<a href='google.com'>This is a link</a>]}>

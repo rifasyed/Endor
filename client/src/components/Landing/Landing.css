@@ -18,13 +18,17 @@
     color: #a00800;
     font-family: 'Exo 2', sans-serif;
   }
-  
-  
+/*   
+  .modalnames {
+    font-size: 30px;
+  } */
   
   /* ///////////////////////////////////////////////////////// */
   .material-icons {
     font-size: 40px;
-  }
+    padding: none;
+    }
+
   .input-field label {
     color: white
   }
@@ -61,15 +65,14 @@
   }
   .modal{
     background-color: rgba(96, 96, 96, 0.454);  
-    margin-top: 150px  ;
-    width: 300px;
-    /* margin: 0 auto;
-    position: relative;
-    opacity: 0.85;
+    margin-top: 150px;
+    width: 45%;
+    height: 55%;
+    position: fixed;
+    transform: none;
+    overflow-y: visible;
     background-position: center;
-    border-width: 30px;
-    border-color: red;
-    box-shadow: none; */
+    border-radius: none;
   }
   .modal .modal-footer {
     background-color: #00000080
@@ -83,10 +86,6 @@
     color: #fff;
     text-decoration:underline;
   }
-  /* #biomeContent  {
-    left: 200px !important;
-    position: relative;
-  } */
   
   .black {
     background-color: #000000d9 !important;
@@ -122,15 +121,7 @@
     text-align: center;
     margin-top: 500px;
   }
-  #logInButton {
-    background-color: rgba(138, 138, 138, 0);    
-    margin: 0 auto;
-    position: relative;
-    opacity: 0.85;
-    background-position: center;
-    border-width: 2px;
-    box-shadow: none;
-  }
+
   #endorWord {
     margin-top: 10px
   }
