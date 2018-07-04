@@ -13,7 +13,7 @@ class ChartJS extends Component {
   }
 
    componentDidMount() {
-    getData()
+    this.getData()
 
     this.interval = setInterval(this.getData, 1000)
   }
