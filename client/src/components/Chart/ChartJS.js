@@ -12,6 +12,7 @@ class ChartJS extends Component {
       tempArr: []
   }
 
+
   componentDidMount() {
     this.getData()
 
