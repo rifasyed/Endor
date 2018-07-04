@@ -1,0 +1,27 @@
+/* .contain{
+    /* position: center;  */
+    /* border-top: 10px;
+    border-bottom: 10px; */
+    /* padding: 600px,100px,100px,100px; */
+    /* -webkit-boxsizing: 600px,100px,100px,20px; */
+    /* border-bottom-width: 20px color green;
+
+}  */
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    border:40px coral;
+}
+
+#submitbutton{
+   
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+
+}
