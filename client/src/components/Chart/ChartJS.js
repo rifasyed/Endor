@@ -1,17 +1,24 @@
 import React, { Component, Fragment } from 'react';
 import { Bar, Line, Pie } from 'react-chartjs-2';
+import PropTypes from 'prop-types';
 import './ChartJS.css'
 import axios from 'axios'
 
 class ChartJS extends Component {
-  state = {
+  state = { 
       labels: ['Temp 1', 'Temp 2', 'Humidity', 'Water'],
       dateArr: [],
       timeArr: [],
       tempArr: []
   }
 
-  componentDidMount () {
+   componentDidMount() {
+    getData()
+
+    this.interval = setInterval(this.getData, 1000)
+  }
+
+  getData = () => {
     let dateArr = this.state.dateArr
     let timeArr = this.state.timeArr
     let tempArr = this.state.tempArr
