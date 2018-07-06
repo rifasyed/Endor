@@ -17,7 +17,7 @@ const Biompage = () => (
 
 
         <Row id="projectNameCenter">
-            <Col s={6}>
+            <Col s={12}>
                 <h5> Project Name</h5>
                 <Input s={12} validate defaultValue='Endor' />
 
@@ -25,8 +25,8 @@ const Biompage = () => (
         </Row>
         <Row>
             <div id="fillBoxOne">
-                <Col s={4}>
-                    <Input s={3} type='select' label='Option' icon='watch_later'>
+                <Col s={6}>
+                    <Input s={6} type='select' label='Option' icon='watch_later'>
                         <option value=""></option>
                         <option value='1'>4</option>
                         <option className="black-text" value='2'>5</option>
@@ -35,8 +35,8 @@ const Biompage = () => (
                 </Col>
             </div>
             <div id="fillBoxTwo">
-                <Col s={4}>
-                    <Input s={3} type='select' label='Option' icon='opacity'>
+                <Col s={6}>
+                    <Input s={6} type='select' label='Option' icon='opacity'>
                         <option value=""></option>
                         <option value='1'>7</option>
                         <option value='2'>8</option>
@@ -46,7 +46,7 @@ const Biompage = () => (
             </div>
             <div id="fillBoxThree">
                 <Col s={6}>
-                    <Input s={3} type='select' label='Option' icon='wb_incandescent'>
+                    <Input s={6} type='select' label='Option' icon='wb_incandescent'>
                         <option value=""></option>
                         <option value='1'>18/6</option>
                         <option value='2'>20/14</option>
