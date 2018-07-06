@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import 'whatwg-fetch';
 import './Auth.css'
 
@@ -6,34 +7,47 @@ import { getFromStorage, setInStorage } from '../../utils/storage';
 // import { BADHINTS } from 'dns';
 
 class Auth extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      isLoading: true,
-      token: '',
-      signInError: '',
-      signInEmail: '',
-      signInPassword: '',
-      signUpFirstName: '',
-      signUpLastName: '',
-      signUpEmail: '',
-      signUpPassword: '',
-      signUpError: ''
-    }
-
-    this.onTextboxChangeSignInEmail = this.onTextboxChangeSignInEmail.bind(this)
-    this.onTextboxChangeSignInPassword = this.onTextboxChangeSignInPassword.bind(this)
-    this.onTextboxChangeSignUpEmail = this.onTextboxChangeSignUpEmail.bind(this)
-    this.onTextboxChangeSignUpPassword = this.onTextboxChangeSignUpPassword.bind(this)
-    this.onTextboxChangeSignUpFirstName = this.onTextboxChangeSignUpFirstName.bind(this)
-    this.onTextboxChangeSignUpLastName = this.onTextboxChangeSignUpLastName.bind(this)
-
-    this.onSignIn = this.onSignIn.bind(this)
-    this.onSignUp = this.onSignUp.bind(this)
-    this.logout = this.logout.bind(this)
-
+  state = {
+    isLoading: true,
+    token: '',
+    signInError: '',
+    signInEmail: '',
+    signInPassword: '',
+    signUpFirstName: '',
+    signUpLastName: '',
+    signUpEmail: '',
+    signUpPassword: '',
+    signUpError: ''
   }
+  
+  // constructor(props) {
+  //   super(props)
+
+  //   this.state = {
+  //     isLoading: true,
+  //     token: '',
+  //     signInError: '',
+  //     signInEmail: '',
+  //     signInPassword: '',
+  //     signUpFirstName: '',
+  //     signUpLastName: '',
+  //     signUpEmail: '',
+  //     signUpPassword: '',
+  //     signUpError: ''
+  //   }
+
+    // this.onTextboxChangeSignInEmail = this.onTextboxChangeSignInEmail.bind(this)
+    // this.onTextboxChangeSignInPassword = this.onTextboxChangeSignInPassword.bind(this)
+    // this.onTextboxChangeSignUpEmail = this.onTextboxChangeSignUpEmail.bind(this)
+    // this.onTextboxChangeSignUpPassword = this.onTextboxChangeSignUpPassword.bind(this)
+    // this.onTextboxChangeSignUpFirstName = this.onTextboxChangeSignUpFirstName.bind(this)
+    // this.onTextboxChangeSignUpLastName = this.onTextboxChangeSignUpLastName.bind(this)
+
+    // this.onSignIn = this.onSignIn.bind(this)
+    // this.onSignUp = this.onSignUp.bind(this)
+    // this.logout = this.logout.bind(this)
+
+  // }
 
   componentDidMount() {
     const obj = getFromStorage('the_main_app')
@@ -61,66 +75,38 @@ class Auth extends Component {
     }
   }
 
-  onTextboxChangeSignInEmail(event) {
-    this.setState({
-      signInEmail: event.target.value
-    })
+
+  onInputChange = (event) => {
+    let {name, value} = event.target
+    this.setState({[name] : value})
   }
 
-  onTextboxChangeSignInPassword(event) {
-    this.setState({
-      signInEmail: event.target.value
+  onSignUp= () => {
+    console.log('ping')
+    axios.get('/test').then(r => {
+      console.log(r)
     })
-  }
-
-  onTextboxChangeSignUpEmail(event) {
-    this.setState({
-      signUpEmail: event.target.value
-    })
-  }
-
-  onTextboxChangeSignUpPassword(event) {
-    this.setState({
-      signUpPassword: event.target.value
-    })
-  }
-
-  onTextboxChangeSignUpFirstName(event) {
-    this.setState({
-      signUpFirstName: event.target.value
-    })
-  }
-
-  onTextboxChangeSignUpLastName(event) {
-    this.setState({
-      signUpLastName: event.target.value
-    })
-  }
-
-  onSignUp() {
-    // Grab state
-    const {
-      signUpFirstName,
-      signUpLastName,
-      signUpEmail,
-      signUpPassword
-    } = this.state
-
     this.setState({
       isLoading: true
     })
-
+    fetch('/test').then(r => {
+      console.log(r.text)
+    })
     // Post request to backend
     fetch('/api/account/signup', {
       method: 'POST',
-      body: JSON.stringify({
-        firstName: signUpFirstName,
-        lastName: signUpLastName,
-        email: signUpEmail,
-        password: signUpPassword
-      })
+      body: {
+        firstName: this.state.signUpFirstName, 
+        lastName: this.state.signUpLastName,
+        email: this.state.signUpEmail,
+        password: this.state.signUpPassword
+      }
     })
-      .then(res => res.json())
+    // console.log(this.state.signUpFirstName)
+    // console.log(this.state.signUpLastName)
+    // console.log(this.state.signUpEmail)
+    // console.log(this.state.signUpPassword)
+      // .then(res => res.json())
       .then(json => {
         console.log('json', json)
         if (json.success) {
@@ -141,13 +127,7 @@ class Auth extends Component {
       })
   }
 
-  onSignIn() {
-    // Grab state
-    // Post request to backend
-    const {
-      signInEmail,
-      signInPassword
-    } = this.state
+  onSignIn = () => {
 
     this.setState({
       isLoading: true
@@ -157,11 +137,11 @@ class Auth extends Component {
     fetch('/api/account/signin', {
       method: 'POST',
       body: JSON.stringify({
-        email: signInEmail,
-        password: signInPassword
+        email: this.state.signInEmail,
+        password: this.state.signInPassword
       })
     })
-      .then(res => res.json())
+      // .then(res => res.json())
       .then(json => {
         console.log('json', json)
         if (json.success) {
@@ -237,22 +217,24 @@ class Auth extends Component {
           <div>
             {
               (signInError) ? (
-                <p>{signInError}</p>
+                <p>{this.state.signInError}</p>
               ) : null
             }
             <p>Sign In</p>
             <input
+            name='signInEmail'
               type="email"
               placeholder="Email"
-              value={signInEmail}
-              onChange={this.onTextboxChangeSignInEmail}
+              value={this.state.signInEmail}
+              onChange={this.onInputChange}
             />
             <br />
             <input
+            name='signInPassword'
               type="password"
               placeholder="Password"
-              value={signInPassword}
-              onChange={this.onTextboxChangeSignInPassword}
+              value={this.state.signInPassword}
+              onChange={this.onInputChange}
             />
             <br />
             <button onClick={this.onSignIn}>Sign In</button>
@@ -267,31 +249,35 @@ class Auth extends Component {
             }
             <p>Sign Up</p>
             <input
+            name='signUpFirstName'
               type="text"
               placeholder="First Name"
-              value={signUpFirstName}
-              onChange={this.onTextboxChangeSignUpFirstName}
+              value={this.state.signUpFirstName}
+              onChange={this.onInputChange}
             />
             <br />
             <input
+            name='signUpLastName'
               type="text"
               placeholder="Last Name"
-              value={signUpLastName}
-              onChange={this.onTextboxChangeSignUpLastName}
+              value={this.state.signUpLastName}
+              onChange={this.onInputChange}
             />
             <br />
             <input
+            name='signUpEmail'
               type="email"
               placeholder="Email"
-              value={signUpEmail}
-              onChange={this.onTextboxChangeSignUpEmail}
+              value={this.state.signUpEmail}
+              onChange={this.onInputChange}
             />
             <br />
             <input
+            name='signUpPassword'
               type="password"
               placeholder="Password"
-              value={signUpPassword}
-              onChange={this.onTextboxChangeSignUpPassword}
+              value={this.state.signUpPassword}
+              onChange={this.onInputChange}
             />
             <br />
             <button onClick={this.onSignUp}>Sign Up</button>

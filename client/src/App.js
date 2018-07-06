@@ -5,12 +5,10 @@ import Main from './components/Main.js'
 import Dashboard from './components/Dashboard';
 import BiomeSelect from './components/BiomeSelect';
 import ChartJS from './components/Chart';
-import RTChart from './components/RTChart';
+// import RTChart from './components/RTChart';
 import Auth from './components/Auth';
-import RSelect from './components/RSelect';
-// import FBig from './components/FBig';
-
-// import Test from './components/Test';
+import ChartRoute from './components/ChartRoute'
+// import DashChart1 from './components/DashChart1';
 
 // import './App.css';
 // import Landing from './components/Landing';
@@ -32,8 +30,7 @@ class App extends Component {
             <Route exact path="/rtchart" component={RTChart} />
             <Route exact path="/auth" component={Auth} />
             <Route exact path="/rselect" component={RSelect} />
-            {/* <Route exact path="/fbig" component={FBig} /> */}
-            {/* <Route exact path="/test" component={Test} /> */}
+            <Route exact path="/route" component={ChartRoute} />
           </div>
         </Router>
       </Fragment>

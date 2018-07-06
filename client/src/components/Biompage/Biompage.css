@@ -119,11 +119,11 @@ vertical-align: top;
     height: 252px;
     /* border: 1px solid #73AD21; */
 }
-#desertBox{
-    /* max-width: 400px;
-    height: 400px; */
-    /* border: 1px solid #73AD21; */
-}
+/* #desertBox{
+    max-width: 400px;
+    height: 400px; 
+    border: 1px solid #73AD21; 
+} */
 #oceanImg {
     width: 600px;
     height: auto;
@@ -135,11 +135,11 @@ vertical-align: top;
     height: 252px;
     /* border: 1px solid #73AD21; */
 }
-#oceanBox{
-        /* max-width: 400px;
-        height: 400px; */
-        /* border: 1px solid #73AD21; */
-}
+/* #oceanBox{
+        max-width: 400px;
+        height: 400px;
+        border: 1px solid #73AD21;
+} */
 #forestImg {
     width: 600px;
     height: auto;
