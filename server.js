@@ -36,8 +36,6 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
-
-
 app.get('/temp', function(req, res) {
   Endor.datas.find({}, function(err, docs) {
     if(err){

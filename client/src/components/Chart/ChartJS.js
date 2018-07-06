@@ -39,63 +39,12 @@ class ChartJS extends Component {
     })
   }
 
-  // or =====================================
-  // componentDidMount() {
-  //   this.intervalId = setInterval(() => this.loadData(), 3600000);
-  //   this.loadData(); // also load one immediately
-  // }
-
-  // getData = () => {
-  //   if (this.props)
-  //   let dateArr = this.state.dateArr
-  //   let timeArr = this.state.timeArr
-  //   let tempArr = this.state.tempArr
-  //   axios.get('/data')
-  //     .then(r => {
-  //       for (let i = 0; i < r.data.length; i++) {
-  //         dateArr.push(r.data[i].date)
-  //         timeArr.push(r.data[i].time)
-  //         tempArr.push(r.data[i].temperature)
-  //       }
-  //       console.log(dateArr)
-  //       console.log(timeArr)
-  //       console.log(tempArr)
-  //       this.setState({ dateArr, timeArr, tempArr })
-  //     }).catch(e => {
-  //       console.log(`My Error ${e}`)
-  //     })
-  // }
-
-  // constructor(props) {
-  //   super(props);
-  //     this.state = {
-  //       chartData: {
-  //         labels: ['Temp 1', 'Temp 2', 'Humidity,', 'Water'],
-  //         datasets: [
-  //           {
-  //             label: 'Temperature (F)',
-  //             data: [
-  //               100, 
-  //               150, 
-  //               300,
-  //               75
-  //             ],
-  //             backgroundColor: [
-  //             'rgba(255, 99, 132, 0.6)',
-  //             'rgba(54, 162, 235, 0.6)',
-  //             'rgba(75, 192, 192, 0.6)',
-  //             'rgba(255, 99, 132, 0.6)'
-  //             ]
-  //           }
-  //         ]
-  //       }
-  //     }
-  // }
-
+ 
   render() {
     return (
       <Fragment>
-      {/* <div className="chart">
+        {/* <Bar ref='chart' data={data} /> */}
+      <div className="chart">
         <Line
           data={this.state.chartData}
 
@@ -104,12 +53,12 @@ class ChartJS extends Component {
           }}
         />
 
-      </div> */}
+      </div>
       <div className="chartBG">
-        <h1>hi</h1>
         <ul>
 
         {this.state.dateArr.map(r => 
+        // {this.state.dateArr.lastIndexOf(r => 
           <li>{r}</li>
         )}
         </ul>
