@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Main from './components/Main.js'
 import Dashboard from './components/Dashboard';
-import BiomeSelect from './components/BiomeSelect';
+import Biompage from './components/Biompage';
 import ChartJS from './components/Chart';
 // import RTChart from './components/RTChart';
 import Auth from './components/Auth';
@@ -25,7 +25,7 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Main} />
             <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/biomeSelect" component={BiomeSelect} />
+            <Route exact path="/biompage" component={Biompage} />
             <Route exact path="/chart" component={ChartJS} />
             {/* <Route exact path="/rtchart" component={RTChart} /> */}
             <Route exact path="/auth" component={Auth} />
