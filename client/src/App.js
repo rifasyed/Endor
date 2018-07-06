@@ -5,7 +5,7 @@ import Main from './components/Main.js'
 import Dashboard from './components/Dashboard';
 import Biompage from './components/Biompage';
 import ChartJS from './components/Chart';
-// import RTChart from './components/RTChart';
+import RTChart from './components/RTChart';
 import Auth from './components/Auth';
 import ChartRoute from './components/ChartRoute'
 // import DashChart1 from './components/DashChart1';
@@ -29,7 +29,6 @@ class App extends Component {
             <Route exact path="/chart" component={ChartJS} />
             <Route exact path="/rtchart" component={RTChart} />
             <Route exact path="/auth" component={Auth} />
-            <Route exact path="/rselect" component={RSelect} />
             <Route exact path="/route" component={ChartRoute} />
           </div>
         </Router>
