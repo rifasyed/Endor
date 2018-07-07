@@ -217,7 +217,7 @@ vertical-align: top;
 #projectNameCenter{
     /* text-align: center; */
     /* padding-left: 550px; */
-    padding-top: 100px;
+    padding-top: 50px;
     position: relative;
 max-width: 400px;
 }
@@ -234,16 +234,20 @@ max-width: 400px;
 
 #fillBoxOne{
     position: relative;
-    max-width: 80%;
+    /* max-width: 20%; */
 }
 
 #fillBoxTwo{
     position: relative;
-    max-width: 80%;
+    /* max-width: 80%; */
 }
 
 
 #fillBoxThree{
     position: relative;
-    max-width: 80%;
+    /* max-width: 80%; */
+}
+
+.space{
+    padding-bottom: 100px;
 }

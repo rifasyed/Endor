@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Lights from '../components/Lights';
+// import BiomeSelector from '../components/BiomeSelector';
 import Biompage from '../components/Biompage';
 import BSTitle from '../components/BSTitle';
 import BiomeModal from '../components/BiomeModal';
@@ -12,7 +12,7 @@ class BiomeSelect extends Component {
         <Biompage>
           {/* <Login /> */}
           <BSTitle/>
-          <Lights/>
+        
           <BiomeModal/>
           </Biompage>
       </div>
