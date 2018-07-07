@@ -1,78 +1,87 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { Bar, Line, Pie } from 'react-chartjs-2';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
-
-class ChartTest extends Component {
+class ChartJS extends Component {
     state = {
-        date: '',
-        time: '',
-        temperature: ''
-    }
-
-    onChangeHostName(e) {
-        this.setState({
-            name: e.target.value
-        });
-    }
-    onChangePort(e) {
-        this.setState({
-            port: e.target.value
-        });
-    }
-    onSubmit(e) {
-        e.preventDefault();
-        const tempPort = {
-            date: this.state.date,
-            time: this.state.time,
-            temperature: this.state.temperature
+        chartData: {
+            labels: ['Temp 1', 'Temp 2', 'Humidity', 'Water'],
+            data: {
+                dateArr: [],
+                timeArr: [],
+                tempArr: []
+            }
         }
-        axios.post('http://localhost:3000/route', tempPort)
-        .then(res => console.log(res.data));
-        
-        this.setState({
-            date: '',
-            time: '',
-            temperature: ''
-        });
     }
 
     componentDidMount() {
-        axios.get('/data').then(r => {
-            console.log(r)
-        })
-        .catch(e => {
-            console.error(`Axios Request to /tempPort/ ${e}`)
-        })
+        this.getData()
 
+        this.interval = setInterval(this.getData, 10000)
+    }
 
-        
-        axios.post('/api/temp1')
-            .then(res => {
-                this.setState({ datas: res.data.date})
-                console.log(this.state.datas)
+    getData = () => {
+        let dateArr = this.state.chartData.data.dateArr
+        let timeArr = this.state.chartData.data.timeArr
+        let tempArr = this.state.chartData.data.tempArr
+        axios.get('/data')
+            .then(r => {
+                for (let i = 0; i < r.data.length; i++) {
+                    dateArr.push(r.data[i].date)
+                    timeArr.push(r.data[i].time)
+                    tempArr.push(r.data[i].temperature)
+                }
+                console.log(dateArr)
+                console.log(timeArr)
+                console.log(tempArr)
+                this.setState({ dateArr, timeArr, tempArr })
+            }).catch(e => {
+                console.log(`My Error ${e}`)
             })
     }
 
     render() {
         return (
-            <div style={{marginTop: 50}}>
-                <h3>Add New Server</h3>
-                <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
-                        <label>Add Host Name:  </label>
-                        <input type="text" className="form-control" value={this.state.name}  onChange={this.onChangeHostName}/>
-                    </div>
-                    <div className="form-group">
-                        <label>Add Server Port: </label>
-                        <input type="text" className="form-control" value={this.state.port}  onChange={this.onChangePort}/>
-                    </div>
-                    <div className="form-group">
-                        <input type="submit" value="Add Node server" className="btn btn-primary"/>
-                    </div>
-                </form>
-            </div>
+            <Fragment>
+                {/* <Bar ref='chart' data={data} /> */}
+
+                <div className="chart">
+                    <Bar
+                        data={this.state.chartData.map(r=>{r})}
+
+                        options={{
+                            maintainAspectRatio: false
+                        }}
+                    />
+
+                </div>
+                <div className="chartBG">
+                    <ul>
+
+                        {this.state.chartData.data.dateArr.map(r =>
+                        // {this.state.chartData.data.dateArr.lastIndexOf(r => 
+                            <li>{r}</li>
+                        )}
+                    </ul>
+                    <ul>
+
+                        {this.state.chartData.data.timeArr.map(r =>
+                            <li>{r}</li>
+                        )}
+                    </ul>
+                    <ul>
+
+                        {this.state.chartData.data.tempArr.map(r =>
+                            <li>{r}</li>
+                        )}
+                    </ul>
+                </div>
+            </Fragment>
         )
     }
-}
+};
 
-export default ChartTest;
+export default ChartJS;
+
+//Reefers Beavers 

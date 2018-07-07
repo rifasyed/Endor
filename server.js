@@ -3,9 +3,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-const boardInit = require('./logicBoard')
+const boardInit = require('./utils/logicBoard')
 const Endor = require('./models/tempModel')
-// const config = require('./db')
 const TempRouter = require('./routes/TempRouter')
 
 const PORT = process.env.PORT || 3001;
@@ -21,8 +20,6 @@ if (process.env.NODE_ENV === "production") {
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
-require('./routes/TempRouter')(app)
-require('./routes/siginin')(app)
 
 mongoose.connect('mongodb://localhost/Endor').then(
   () => {console.log('Database is connected')},
@@ -30,14 +27,17 @@ mongoose.connect('mongodb://localhost/Endor').then(
 });
 boardInit()
 
-// Send every request to the React app
+// Require routes
+require('./routes/TempRouter')(app)
+require('./routes/siginin')(app)
+
 // Define any API routes before this runs
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 app.get('/temp', function(req, res) {
-  Endor.datas.find({}, function(err, docs) {
+  Endor.temp.find({}, function(err, docs) {
     if(err){
       throw err;
     } 
