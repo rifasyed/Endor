@@ -37,3 +37,8 @@
 .iconSize {
   font-size: 20px;
 }
+
+.tempOneCard {
+  max-height: 200px;
+  overflow-y: scroll;
+}
