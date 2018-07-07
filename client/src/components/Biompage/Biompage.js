@@ -25,8 +25,9 @@ const Biompage = () => (
         </Row>
         <Row>
             <div id="fillBoxOne">
-                <Col s={6}>
-                    <Input s={6} type='select' label='Option' icon='watch_later'>
+                <Col s={4}>
+                    <h5>Veg Weeks <Icon> watch_later</Icon></h5>
+                    <Input s={6} type='select' >
                         <option value=""></option>
                         <option value='1'>4</option>
                         <option className="black-text" value='2'>5</option>
@@ -35,8 +36,9 @@ const Biompage = () => (
                 </Col>
             </div>
             <div id="fillBoxTwo">
-                <Col s={6}>
-                    <Input s={6} type='select' label='Option' icon='opacity'>
+                <Col s={4}>
+                <h5>Flow Weeks <Icon>opacity</Icon></h5>
+                    <Input s={6} type='select'>
                         <option value=""></option>
                         <option value='1'>7</option>
                         <option value='2'>8</option>
@@ -45,8 +47,9 @@ const Biompage = () => (
                 </Col>
             </div>
             <div id="fillBoxThree">
-                <Col s={6}>
-                    <Input s={6} type='select' label='Option' icon='wb_incandescent'>
+                <Col s={4}>
+                <h5>Light Cycle <Icon>wb_incandescent</Icon></h5>
+                    <Input s={6} type='select'>
                         <option value=""></option>
                         <option value='1'>18/6</option>
                         <option value='2'>20/14</option>
@@ -99,7 +102,7 @@ const Biompage = () => (
         <div>
 
             <div>
-                <Button id="submitbutton" waves='light' node='a' href='#'> Submit </Button>
+                <Button className="submitbutton" waves='light' node='a' href='#'> Submit </Button>
             </div>
 
 

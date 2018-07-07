@@ -194,7 +194,7 @@ vertical-align: top;
     box-sizing: border-box;
 }
 
-#submitbutton{
+.submitbutton{
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -210,14 +210,12 @@ vertical-align: top;
     margin-top: 100px;
 }
 
-  /* .submitbutton:focus {
-    background-color: rgba(0, 0, 0, 0) !important;
-  } */
+  .submitbutton:hover {
+    background-color: rgba(138, 138, 138, 0.212); 
+  }
 
-#projectNameCenter{
-    /* text-align: center; */
-    /* padding-left: 550px; */
-    padding-top: 100px;
+#projectNameCenter {
+    padding-top: 50px;
     position: relative;
 max-width: 400px;
 }
@@ -234,16 +232,17 @@ max-width: 400px;
 
 #fillBoxOne{
     position: relative;
-    max-width: 80%;
+    /* max-width: 20%; */
 }
 
 #fillBoxTwo{
     position: relative;
-    max-width: 80%;
+    /* max-width: 80%; */
 }
 
 
 #fillBoxThree{
     position: relative;
-    max-width: 80%;
+    /* max-width: 80%; */
 }
+
