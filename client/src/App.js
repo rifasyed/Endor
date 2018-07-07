@@ -28,7 +28,6 @@ class App extends Component {
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/biompage" component={Biompage} />
             <Route exact path="/chart" component={ChartJS} />
-            <Route exact path="/rtchart" component={RTChart} />
             <Route exact path="/auth" component={Auth} />
             <Route exact path="/route" component={ChartRoute} />
             <Route exact path="/switch" component={Switch} />
