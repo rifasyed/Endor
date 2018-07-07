@@ -1,0 +1,43 @@
+.switchStyle {
+    background-image: linear-gradient(
+      rgba(20,20,20, .2), 
+      rgba(20, 20, 20, .3)),
+      url("../../assets/wallhaven-429538 (1).jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    height: 100vh; 
+    width: 100%;
+    background-size: cover;
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 16px;
+  }
+
+.itemSpace {
+    padding: 50px;
+  }
+
+.switchHeader {
+  font-weight: bold;
+  position: relative;
+}
+
+label {
+  color: white;
+  }
+
+.material-icons {
+  font-size: 25px;
+  padding: 10px;
+}
+
+.headerIcon {
+  font-size: 45px;
+}
+
+
+
+
+
+

@@ -41,14 +41,14 @@ i {
     color: #000;
 }
 .input-field input[type=text]:not(.browser-default) {
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid #a00800;
     color: white;
 }
 .input-field textarea[class=materialize-textarea]:focus {
    color: white;
 }
 .input-field input:focus + label {
-    color: red !important;
+    color: #a00800!important;
 }
 .row .input-field input:focus {
     border-bottom: 1px solid white !important;
@@ -194,28 +194,31 @@ vertical-align: top;
     box-sizing: border-box;
 }
 
-#submitbutton{
-   
+.submitbutton{
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
     overflow: hidden;
     outline:none;
-
+    font-size: 25px;
+    color: white;
+    max-width: 100%;
+    margin: 80px auto;
+    height: 40px;
+    text-align: center;
+    margin-top: 100px;
 }
 
-#projectNameCenter{
-    /* text-align: center; */
-    /* padding-left: 550px; */
-    padding-top: 150px;
+  .submitbutton:hover {
+    background-color: rgba(138, 138, 138, 0.212); 
+  }
+
+#projectNameCenter {
+    padding-top: 50px;
+    position: relative;
+max-width: 400px;
 }
-
-
-/* .dropdown-content .select-dropdown{
-color:red;
-} */
-
 
 
 .select-dropdown{
@@ -224,5 +227,22 @@ color:red;
 }
 
 .dropdown-content li span{
-    color: red;
+    color: #ef4036;
 }
+
+#fillBoxOne{
+    position: relative;
+    /* max-width: 20%; */
+}
+
+#fillBoxTwo{
+    position: relative;
+    /* max-width: 80%; */
+}
+
+
+#fillBoxThree{
+    position: relative;
+    /* max-width: 80%; */
+}
+
