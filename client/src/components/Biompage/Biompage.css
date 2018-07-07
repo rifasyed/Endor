@@ -232,17 +232,23 @@ max-width: 400px;
 
 #fillBoxOne{
     position: relative;
-    /* max-width: 20%; */
+    
 }
 
 #fillBoxTwo{
     position: relative;
-    /* max-width: 80%; */
+    
 }
 
 
 #fillBoxThree{
     position: relative;
-    /* max-width: 80%; */
+ 
 }
 
+.row .col.s6 {
+    width: 40%;
+    margin-left: auto;
+    left: 160px;
+    right: auto;
+}
