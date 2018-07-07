@@ -1,0 +1,49 @@
+[33mae9f1234[m[33m ([m[1;36mHEAD -> [m[1;32mdashboard[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: pull origin master: Fast-forward
+[33mff430c27[m HEAD@{1}: pull origin master: Fast-forward
+[33m4a8c48cd[m[33m ([m[1;31morigin/dashboard[m[33m)[m HEAD@{2}: commit: working on chart data for dashboard
+[33m3b4e926b[m[33m ([m[1;31morigin/nodeChanges[m[33m, [m[1;32mnodeChanges[m[33m)[m HEAD@{3}: checkout: moving from nodeChanges to dashboard
+[33m3b4e926b[m[33m ([m[1;31morigin/nodeChanges[m[33m, [m[1;32mnodeChanges[m[33m)[m HEAD@{4}: commit: working on chartjs
+[33mae100044[m HEAD@{5}: pull origin master: Fast-forward
+[33m0ca82374[m HEAD@{6}: commit: updated app.js
+[33m66be187d[m HEAD@{7}: pull origin master: Fast-forward
+[33m679d6001[m HEAD@{8}: commit: changed node_modules
+[33ma35310b8[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{9}: checkout: moving from master to nodeChanges
+[33ma35310b8[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{10}: checkout: moving from master to master
+[33ma35310b8[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{11}: commit (merge): fixing unmerged paths
+[33ma2bcc8a0[m HEAD@{12}: merge biomedropdown: Merge made by the 'recursive' strategy.
+[33m2666b3ca[m HEAD@{13}: checkout: moving from biomedropdown to master
+[33m72d0bb8e[m[33m ([m[1;31morigin/biomedropdown[m[33m, [m[1;32mbiomedropdown[m[33m)[m HEAD@{14}: checkout: moving from testPush to biomedropdown
+[33m3a2d6b21[m[33m ([m[1;31morigin/testPush[m[33m, [m[1;32mtestPush[m[33m)[m HEAD@{15}: commit: changed interval from 1 to 2 seconds
+[33mc8317a2c[m HEAD@{16}: commit: test push to fix merge issue
+[33m3549c330[m[33m ([m[1;31morigin/setInterval[m[33m, [m[1;32msetInterval[m[33m)[m HEAD@{17}: checkout: moving from setInterval to testPush
+[33m3549c330[m[33m ([m[1;31morigin/setInterval[m[33m, [m[1;32msetInterval[m[33m)[m HEAD@{18}: commit: adding interval to componentdidmount
+[33m2d370ee6[m[33m ([m[1;31morigin/chartData[m[33m, [m[1;32mchartData[m[33m)[m HEAD@{19}: checkout: moving from chartData to setInterval
+[33m2d370ee6[m[33m ([m[1;31morigin/chartData[m[33m, [m[1;32mchartData[m[33m)[m HEAD@{20}: commit: have the data populating to the page, need to add it to the charts
+[33m35939b5c[m[33m ([m[1;31morigin/routing[m[33m, [m[1;32mrouting[m[33m)[m HEAD@{21}: checkout: moving from routing to chartData
+[33m35939b5c[m[33m ([m[1;31morigin/routing[m[33m, [m[1;32mrouting[m[33m)[m HEAD@{22}: commit: need to figure out how to get data from table in props and state
+[33m0bc34cf5[m[33m ([m[1;31morigin/cssalldayerrday[m[33m, [m[1;32mcssalldayerrday[m[33m)[m HEAD@{23}: checkout: moving from cssalldayerrday to routing
+[33m0bc34cf5[m[33m ([m[1;31morigin/cssalldayerrday[m[33m, [m[1;32mcssalldayerrday[m[33m)[m HEAD@{24}: commit: landing page visual enhancements
+[33m3bf0aa18[m HEAD@{25}: pull origin master: Fast-forward
+[33m96c9abe2[m HEAD@{26}: pull origin master: Fast-forward
+[33mdde9346b[m[33m ([m[1;32malmostgotuserauth[m[33m)[m HEAD@{27}: checkout: moving from almostgotuserauth to cssalldayerrday
+[33mdde9346b[m[33m ([m[1;32malmostgotuserauth[m[33m)[m HEAD@{28}: pull origin master: Fast-forward
+[33m2baaf72b[m[33m ([m[1;31morigin/almostgotuserauth[m[33m)[m HEAD@{29}: commit: fixed all errors and proxy settings, have to run nodemon and npm start seperately, still need to work on local/session storage
+[33m6968f1e8[m[33m ([m[1;31morigin/authBG[m[33m, [m[1;32mauthBG[m[33m)[m HEAD@{30}: checkout: moving from authBG to almostgotuserauth
+[33m6968f1e8[m[33m ([m[1;31morigin/authBG[m[33m, [m[1;32mauthBG[m[33m)[m HEAD@{31}: commit: fixed errors in user auth
+[33m04376d49[m[33m ([m[1;32mmodaltest[m[33m)[m HEAD@{32}: checkout: moving from modaltest to authBG
+[33m04376d49[m[33m ([m[1;32mmodaltest[m[33m)[m HEAD@{33}: pull origin master: Fast-forward
+[33m7c9a949e[m[33m ([m[1;31morigin/modaltest[m[33m, [m[1;31morigin/cssmodals[m[33m, [m[1;32mcssmodals[m[33m)[m HEAD@{34}: checkout: moving from cssmodals to modaltest
+[33m7c9a949e[m[33m ([m[1;31morigin/modaltest[m[33m, [m[1;31morigin/cssmodals[m[33m, [m[1;32mcssmodals[m[33m)[m HEAD@{35}: commit: improved visuals, added animations
+[33mdde3e96b[m HEAD@{36}: pull origin master: Fast-forward
+[33m3d3ecee5[m HEAD@{37}: pull origin master: Fast-forward
+[33m0af85551[m[33m ([m[1;31morigin/modalcss[m[33m, [m[1;32mmodalcss[m[33m)[m HEAD@{38}: checkout: moving from modalcss to cssmodals
+[33m0af85551[m[33m ([m[1;31morigin/modalcss[m[33m, [m[1;32mmodalcss[m[33m)[m HEAD@{39}: commit: improved modal visuals
+[33m9315be52[m HEAD@{40}: pull origin master: Fast-forward
+[33md37b9000[m[33m ([m[1;31morigin/funwithmodals[m[33m, [m[1;32mfunwithmodals[m[33m)[m HEAD@{41}: checkout: moving from master to modalcss
+[33m2666b3ca[m HEAD@{42}: checkout: moving from modalcss to master
+[33md37b9000[m[33m ([m[1;31morigin/funwithmodals[m[33m, [m[1;32mfunwithmodals[m[33m)[m HEAD@{43}: checkout: moving from funwithmodals to modalcss
+[33md37b9000[m[33m ([m[1;31morigin/funwithmodals[m[33m, [m[1;32mfunwithmodals[m[33m)[m HEAD@{44}: commit: login modal css bugs fixed, remaining modals in progress
+[33m5efd8a31[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m)[m HEAD@{45}: checkout: moving from test to funwithmodals
+[33m5efd8a31[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m)[m HEAD@{46}: commit: fixed previous update
+[33m2666b3ca[m HEAD@{47}: checkout: moving from master to test
+[33m2666b3ca[m HEAD@{48}: clone: from https://github.com/rifasyed/Endor.git

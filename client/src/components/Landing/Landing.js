@@ -4,9 +4,12 @@ import './Landing.css';
 import Login from '../Login'
 import Title from '../Title'
 import LandingModals from '../LandingModals'
+import BiomPage from '../Biompage/Biompage'
 
-
-
+function pageChange(e) {
+    e.preventDefault();
+    window.location.assign('/BiomPage')
+}
 
 
 const Landing = () => (
@@ -42,7 +45,7 @@ const Landing = () => (
         </div>
         <Row id="newProfile">
             <Col s={12}>
-                <Button large className="newProfBtn"><Icon id="addIcon" left>note_add</Icon>New Project</Button>
+                <Button onClick={pageChange} large className="newProfBtn"><Icon id="addIcon" left>note_add</Icon>New Project</Button>
             </Col>  
         </Row>
         {/*Login Modal Content*/}

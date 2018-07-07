@@ -4,14 +4,22 @@ import { Row, Col, Card, CardPanel, CardTitle, SideNav, SideNavItem, Button, Ico
 import ChartJS from '../Chart/ChartJS';
 import axios from 'axios';
 import './Dashboard.css';
+import Switch from '../Switch/Switch'
+
+function pageChange(e) {
+  e.preventDefault();
+  window.location.assign('/Switch')
+}
+
 
 const Dashboard = () => (
   <div className='dashboardBG'>
     <h1 className="dashHead">DASHBOARD [ <Icon className="iconSize">assessment</Icon> ]</h1>
     <Row>
       <SideNav
-      // trigger={<Button floating large icon="add" id="navBtn"></Button>}
-      // options={{ closeOnClick: true }}
+      id="sideNav"
+      trigger={<Button floating large icon="add" id="navBtn"></Button>}
+      options={{ closeOnClick: true }}
       >
         <SideNavItem userView
           user={{
@@ -21,14 +29,13 @@ const Dashboard = () => (
             email: 'jdandturk@gmail.com'
           }}
         />
-        <SideNavItem href='#!icon'>First Link With Icon</SideNavItem>
+        <SideNavItem onClick={pageChange}>Switches</SideNavItem>
         <SideNavItem href='#!second'>Second Link</SideNavItem>
         <SideNavItem divider />
         <SideNavItem subheader>Subheader</SideNavItem>
         <SideNavItem waves href='#!third'>Third Link With Waves</SideNavItem>
       </SideNav>
-      <Col m={2} s={12} />
-      <Col m={10} s={12}>
+      <Col m={12} s={12}>
         {/* <Row>
           <Input name='on' type='switch' value='1' />
         </Row> */}
