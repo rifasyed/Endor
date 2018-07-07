@@ -102,7 +102,7 @@ const Biompage = () => (
         <div>
 
             <div>
-                <Button id="submitbutton" waves='light' node='a' href='#'> Submit </Button>
+                <Button className="submitbutton" waves='light' node='a' href='#'> Submit </Button>
             </div>
 
 
