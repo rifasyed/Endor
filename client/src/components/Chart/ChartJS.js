@@ -1,22 +1,23 @@
 import React, { Component, Fragment } from 'react';
 import { Bar, Line, Pie } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
+import Scrollspy from 'react-scrollspy'
 import './ChartJS.css'
 import axios from 'axios'
 
 class ChartJS extends Component {
-  state = { 
-      labels: ['Temp 1', 'Temp 2', 'Humidity', 'Water'],
-      dateArr: [],
-      timeArr: [],
-      tempArr: []
+  state = {
+    labels: ['Temp 1', 'Temp 2', 'Humidity', 'Water'],
+    dateArr: [],
+    timeArr: [],
+    tempArr: []
   }
 
 
   componentDidMount() {
     this.getData()
 
-    this.interval = setInterval(this.getData, 2000)
+    this.interval = setInterval(this.getData, 10000)
   }
 
   getData = () => {
@@ -24,109 +25,42 @@ class ChartJS extends Component {
     let timeArr = this.state.timeArr
     let tempArr = this.state.tempArr
     axios.get('/data')
-    .then(r => {
-      for (let i = 0; i < r.data.length; i++) {
-        dateArr.push(r.data[i].date)
-        timeArr.push(r.data[i].time)
-        tempArr.push(r.data[i].temperature)
-      }
-      console.log(dateArr)
-      console.log(timeArr)
-      console.log(tempArr)
-      this.setState({dateArr, timeArr, tempArr})
-    }).catch(e => {
-      console.log(`My Error ${e}`)
-    })
+      .then(r => {
+        for (let i = 0; i < r.data.length; i++) {
+          dateArr.push(r.data[i].date)
+          timeArr.push(r.data[i].time)
+          tempArr.push(r.data[i].temperature)
+          console.log("this is " + r.data[i].time)
+        }
+        this.setState({ dateArr, timeArr, tempArr })
+      }).catch(e => {
+        console.log(`My Error ${e}`)
+      })
   }
 
-  // or =====================================
-  // componentDidMount() {
-  //   this.intervalId = setInterval(() => this.loadData(), 3600000);
-  //   this.loadData(); // also load one immediately
-  // }
-
-  // getData = () => {
-  //   if (this.props)
-  //   let dateArr = this.state.dateArr
-  //   let timeArr = this.state.timeArr
-  //   let tempArr = this.state.tempArr
-  //   axios.get('/data')
-  //     .then(r => {
-  //       for (let i = 0; i < r.data.length; i++) {
-  //         dateArr.push(r.data[i].date)
-  //         timeArr.push(r.data[i].time)
-  //         tempArr.push(r.data[i].temperature)
-  //       }
-  //       console.log(dateArr)
-  //       console.log(timeArr)
-  //       console.log(tempArr)
-  //       this.setState({ dateArr, timeArr, tempArr })
-  //     }).catch(e => {
-  //       console.log(`My Error ${e}`)
-  //     })
-  // }
-
-  // constructor(props) {
-  //   super(props);
-  //     this.state = {
-  //       chartData: {
-  //         labels: ['Temp 1', 'Temp 2', 'Humidity,', 'Water'],
-  //         datasets: [
-  //           {
-  //             label: 'Temperature (F)',
-  //             data: [
-  //               100, 
-  //               150, 
-  //               300,
-  //               75
-  //             ],
-  //             backgroundColor: [
-  //             'rgba(255, 99, 132, 0.6)',
-  //             'rgba(54, 162, 235, 0.6)',
-  //             'rgba(75, 192, 192, 0.6)',
-  //             'rgba(255, 99, 132, 0.6)'
-  //             ]
-  //           }
-  //         ]
-  //       }
-  //     }
-  // }
 
   render() {
     return (
-      <Fragment>
-      {/* <div className="chart">
-        <Line
-          data={this.state.chartData}
+      <Fragment>  
+        <div className="chartBG">
+          <ul className="dataCard">
 
-          options={{
-            maintainAspectRatio: false
-          }}
-        />
-
-      </div> */}
-      <div className="chartBG">
-        <h1>hi</h1>
-        <ul>
-
-        {this.state.dateArr.map(r => 
-          <li>{r}</li>
-        )}
-        </ul>
-        <ul>
-
-        {this.state.timeArr.map(r => 
-          <li>{r}</li>
-        )}
-        </ul>
-        <ul>
-
-        {this.state.tempArr.map(r => 
-          <li>{r}</li>
-        )}
-        </ul>
-      </div>
-          </Fragment>
+            {this.state.dateArr.map(r =>
+              <li>{r}</li>
+            )}
+          </ul>
+          {/* <ul className="dataCard">
+            {this.state.timeArr.map(r =>
+              <li>{r}</li>
+            )}
+          </ul>
+          <ul className="dataCard">
+            {this.state.tempArr.map(r =>
+              <li>{r}</li>
+            )}
+          </ul> */}
+        </div>
+      </Fragment >
     )
   }
 };

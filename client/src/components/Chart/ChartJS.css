@@ -1,3 +1,7 @@
 .chartBG {
-    background-color: black;
+    background-color: gray;
+}
+
+.dataCard {
+    max-height: 100px;
 }
