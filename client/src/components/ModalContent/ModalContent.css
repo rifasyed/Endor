@@ -1,10 +1,11 @@
 #madmodal {
     background-color: rgba(0, 0, 0, 0.671); 
     height: 300px;
+    color: white;
 }
 
 .modFin {
-  font-size: 10px !important;
+  font-size: 10px;
 }
 
 .modal-close,

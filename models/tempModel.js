@@ -1,6 +1,8 @@
 var mongoose = require("mongoose");
 
+
 var Schema = mongoose.Schema;
+
 
 var DataSchema = new Schema({
   
@@ -10,6 +12,9 @@ var DataSchema = new Schema({
  
 });
 
+
+
 var Data = mongoose.model("Data", DataSchema);
+
 
 module.exports = Data ;

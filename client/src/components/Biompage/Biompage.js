@@ -3,11 +3,15 @@ import { Icon, Col, Button, Input, Row } from 'react-materialize';
 import './Biompage.css';
 import Login from '../Login';
 import BSTitle from '../BSTitle';
+import Dashboard from '../Dashboard/Dashboard'
 // import BiomeModal from '../BiomeModal';
 // import Form from '../Form/Form';
 // import FBig from '../FBig';
 
-
+function pageChange(e) {
+    e.preventDefault();
+    window.location.assign('/Dashboard')
+}
 
 const Biompage = () => (
 
@@ -99,7 +103,7 @@ const Biompage = () => (
         <div>
 
             <div>
-                <Button id="submitbutton" waves='light' node='a' href='#'> Submit </Button>
+                <Button onClick={pageChange} id="submitbutton" waves='light' node='a' href='#'> Submit </Button>
             </div>
 
 
