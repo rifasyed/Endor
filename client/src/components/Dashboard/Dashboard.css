@@ -37,3 +37,17 @@
 .iconSize {
   font-size: 20px;
 }
+
+.tempOneCard {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+#sideNav {
+  background-color: gray;
+  color: white;
+}
+
+#chartCard {
+  background-color: rgb(33, 95, 95);
+}

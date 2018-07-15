@@ -3,11 +3,15 @@ import { Icon, Col, Button, Input, Row } from 'react-materialize';
 import './Biompage.css';
 import Login from '../Login';
 import BSTitle from '../BSTitle';
+import Dashboard from '../Dashboard/Dashboard'
 // import BiomeModal from '../BiomeModal';
 // import Form from '../Form/Form';
 // import FBig from '../FBig';
 
-
+function pageChange(e) {
+    e.preventDefault();
+    window.location.assign('/Dashboard')
+}
 
 const Biompage = () => (
 
@@ -25,9 +29,8 @@ const Biompage = () => (
         </Row>
         <Row>
             <div id="fillBoxOne">
-                <Col s={4}>
-                    <h5>Veg Weeks <Icon> watch_later</Icon></h5>
-                    <Input s={6} type='select' >
+                <Col s={6}>
+                    <Input s={6} type='select' label='Option' icon='watch_later'>
                         <option value=""></option>
                         <option value='1'>4</option>
                         <option className="black-text" value='2'>5</option>
@@ -36,9 +39,8 @@ const Biompage = () => (
                 </Col>
             </div>
             <div id="fillBoxTwo">
-                <Col s={4}>
-                <h5>Flow Weeks <Icon>opacity</Icon></h5>
-                    <Input s={6} type='select'>
+                <Col s={6}>
+                    <Input s={6} type='select' label='Option' icon='opacity'>
                         <option value=""></option>
                         <option value='1'>7</option>
                         <option value='2'>8</option>
@@ -47,9 +49,8 @@ const Biompage = () => (
                 </Col>
             </div>
             <div id="fillBoxThree">
-                <Col s={4}>
-                <h5>Light Cycle <Icon>wb_incandescent</Icon></h5>
-                    <Input s={6} type='select'>
+                <Col s={6}>
+                    <Input s={6} type='select' label='Option' icon='wb_incandescent'>
                         <option value=""></option>
                         <option value='1'>18/6</option>
                         <option value='2'>20/14</option>
@@ -102,7 +103,7 @@ const Biompage = () => (
         <div>
 
             <div>
-                <Button className="submitbutton" waves='light' node='a' href='#'> Submit </Button>
+                <Button onClick={pageChange} id="submitbutton" waves='light' node='a' href='#'> Submit </Button>
             </div>
 
 
