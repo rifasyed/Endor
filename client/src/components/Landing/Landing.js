@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Icon, Col, Button, Row } from 'react-materialize';
 import './Landing.css';
 import Login from '../Login'
 import Title from '../Title'
 import LandingModals from '../LandingModals'
+import { Redirect } from 'react-router'
+import Link from 'react-router'
 import BiomPage from '../Biompage/Biompage'
 
 function pageChange(e) {
     e.preventDefault();
     window.location.assign('/BiomPage')
 }
-import { Redirect } from 'react-router'
-import Link from 'react-router'
 
 
 
