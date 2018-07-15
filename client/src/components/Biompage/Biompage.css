@@ -245,5 +245,12 @@ max-width: 400px;
 
 #fillBoxThree{
     position: relative;
+}
+
+.row .col.s6 {
+    width: 40%;
+    margin-left: auto;
+    left: 160px;
+    right: auto;
     max-width: 80%;
 }
