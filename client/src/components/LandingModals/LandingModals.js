@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Col, Row } from 'react-materialize';
+import { Icon, Col, Row, Slider, Slide } from 'react-materialize';
 import './LandingModals.css';
 import ModalContent from '../ModalContent'
 
@@ -7,7 +7,23 @@ import ModalContent from '../ModalContent'
 
 const LandingModals = props => (
     <Row id="coverTags">
-        <Col id="gauge" s={4}>
+        <Slider id="sliderColor">
+            <Slide className="slideStyle"
+                title="Real-Time Data Monitoring">
+                Platform provides real-time monitoring of all growth levels including: Temperature, Humidity, Light Spectrum, Growth Cycle, PH (H20), & Nutrient Levels
+            </Slide>
+            <Slide
+                title="Biome Selector"
+                placement="left">
+                Here's our small slogan.
+            </Slide>
+            <Slide
+                title="Aeroponic Delivery"
+                placement="right">
+                Here's our small slogan.
+            </Slide>
+        </Slider>
+        {/* <Col id="gauge" s={4}>
             <ModalContent iconClicker={
                 <a id="dialBtn">
                     <Icon medium className="material-icons">devices</Icon>
@@ -45,7 +61,7 @@ const LandingModals = props => (
                 list={["Temperature", "Humidity", "Light Spectrum", "Growth Cycle", "PH (H20)", "Nutrient Levels (H20)"]}
             />
             <span className="modalnames">AEROPONIC DELIVERY</span>
-        </Col>
+        </Col> */}
     </Row>
 )
 

@@ -1,5 +1,5 @@
 .landingBG {
-    background-image: url("../../assets/wallhaven-429532.jpg");
+    background-image: url("../../assets/astronomy-cosmos-crater-lake-national-park-262669.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -8,6 +8,11 @@
     background-size: cover;
     color: white;
     font-family: 'Exo 2', sans-serif;
+  }
+
+  .bkgTest {
+    background-color: rgba(175, 23, 23, 0.267);
+   
   }
   
   * {
@@ -142,9 +147,9 @@
     font-size: 25px;
     color: #a00800;
   }
-  #coverTags {
-    margin-top: 340px;
-  }
+  /* #coverTags {
+    margin-top: 240px;
+  } */
   #gauge {
     text-align: center;
   }

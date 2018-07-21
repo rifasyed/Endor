@@ -31,7 +31,7 @@ class Landing extends Component {
         // }
 
         return (
-            <div className='landingBG'>
+            <div className='landingBG bkgTest'>
                 {/*Login*/}
                 <div>
                     <Login />
