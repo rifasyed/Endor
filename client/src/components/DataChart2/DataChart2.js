@@ -2,23 +2,37 @@
 import React, { Component, Fragment } from 'react';
 import { Bar, Line, Pie } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
-import Scrollspy from 'react-scrollspy'
 import axios from 'axios'
 
 class DataChart2 extends Component {
   state = {
     labels: ['Temp 1', 'Temp 2', 'Humidity', 'Water'],
-    dateArr: [],
-    timeArr: [],
-    tempArr: []
-  }
-
+    dateArr: {},
+    timeArr: {},
+    tempArr: {}
+  };
 
   componentDidMount() {
     this.getData()
 
     this.interval = setInterval(this.getData, 10000)
-  }
+  };
+
+  getDate = () => {
+    // const date = this.state.dateArr 
+    this.setState(
+      {
+        dateArr: {
+          label: [
+            'Date'
+          ],
+          datasets: [{
+            data: []
+          }]
+        }
+      }
+    )
+  };
 
   getData = () => {
     let dateArr = this.state.dateArr
