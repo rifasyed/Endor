@@ -4,32 +4,33 @@ import './Landing.css';
 import Login from '../Login'
 import Title from '../Title'
 import LandingModals from '../LandingModals'
-import { Redirect } from 'react-router'
+import Dashboard from '../Dashboard/Dashboard'
 import Link from 'react-router'
-import BiomPage from '../Biompage/Biompage'
+// import { Redirect } from  'react-router-dom'
 
 function pageChange(e) {
     e.preventDefault();
-    window.location.assign('/BiomPage')
+    window.location.assign('/Dashboard')
 }
 
 
 
 class Landing extends Component {
-    // state: {
+    // state = {
     //     redirect: false
     // }
-    // handlePageChange() => {
+
+    // handlePageChange = () => {
     //     this.setState({ redirect: true })
     // }
+
+    // renderRedirect = () => {
+    //     if (this.state.redirect) {
+    //         return <Redirect to='/BiomPage'
+    //     }
+    // }
+
     render() {
-
-        // const { redirect } = this.state
-
-        // if (redirect) {
-        //     return <Redirect to='/biomPage'
-        // }
-
         return (
             <div className='landingBG'>
                 {/*Login*/}
@@ -61,7 +62,7 @@ class Landing extends Component {
 
                 </div>
                 <Row id="newProfile">
-                    <Col s={12}>
+                    <Col s={12}>    
                         <Button onClick={pageChange} large className="newProfBtn"><Icon id="addIcon" left>note_add</Icon>New Project</Button>
                     </Col>
                 </Row>
@@ -70,4 +71,4 @@ class Landing extends Component {
         );
     }
 }
-    export default Landing;
+export default Landing;

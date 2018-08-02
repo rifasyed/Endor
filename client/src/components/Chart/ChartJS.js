@@ -2,33 +2,12 @@ import React, { Component } from 'react';
 import { Bar, Line, Pie } from 'react-chartjs-2';
 
 class ChartJS extends Component {
-  constructor(props) {
-    super(props);
-      this.state = {
-        chartData: {
-          labels: ['Origin', 'Temp 1', 'Temp 2', 'Humidity,', 'Water'],
-          datasets: [
-            {
-              // label: 'Temperature (F)',
-              data: [
-                50,
-                80, 
-                82, 
-                72,
-                65
-              ],
-              backgroundColor: [
-              'rgba(255, 99, 132, 0.6)',
-              'rgba(54, 162, 235, 0.6)',
-              'rgba(75, 192, 192, 0.6)',
-              'rgba(255, 99, 132, 0.6)'
-              ]
-            }
-          ]
-        }
-      }
+  state = {
+    temp1Data: {},
+    temp2Data: {},
+    humidityData: {},
+    waterData: {}
   }
-
   render() {
     return (
       <div className="chart">

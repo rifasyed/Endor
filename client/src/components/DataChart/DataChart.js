@@ -2,7 +2,7 @@
 import React, { Component, Fragment } from 'react';
 import { Bar, Line, Pie } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
-import Scrollspy from 'react-scrollspy'
+// import Scrollspy from 'react-scrollspy'
 import axios from 'axios'
 
 class DataChart extends Component {
@@ -27,7 +27,7 @@ class DataChart extends Component {
     axios.get('/data')
       .then(r => {
         for (let i = 0; i < r.data.length; i++) {
-          dateArr.push(r.data[i].date)
+          dateArr.push(r.data[i].dat)
           timeArr.push(r.data[i].time)
           tempArr.push(r.data[i].temperature)
           console.log("this is " + r.data[i].time)
@@ -44,12 +44,11 @@ class DataChart extends Component {
       <Fragment>  
         <div className="chartBG">
           <ul className="dataCard">
-
             {this.state.dateArr.map(r =>
               <li>{r}</li>
             )}
           </ul>
-          {/* <ul className="dataCard">
+          <ul className="dataCard">
             {this.state.timeArr.map(r =>
               <li>{r}</li>
             )}
@@ -58,7 +57,7 @@ class DataChart extends Component {
             {this.state.tempArr.map(r =>
               <li>{r}</li>
             )}
-          </ul> */}
+          </ul>
         </div>
       </Fragment >
     )
