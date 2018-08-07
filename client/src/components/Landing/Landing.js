@@ -56,15 +56,7 @@ class Landing extends Component {
 
                 {/* <ModalContent /> */}
 
-                {/*Breadcrumbs*/}
-                <div className="row">
 
-                </div>
-                <Row id="newProfile">
-                    <Col s={12}>
-                        <Button onClick={pageChange} large className="newProfBtn"><Icon id="addIcon" left>note_add</Icon>New Project</Button>
-                    </Col>
-                </Row>
                 {/*Login Modal Content*/}
             </div>
         );

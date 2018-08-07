@@ -10,17 +10,23 @@ const LandingModals = props => (
         <Slider id="sliderColor">
             <Slide className="slideStyle"
                 title="Real-Time Data Monitoring">
-                Platform provides real-time monitoring of all growth levels including: Temperature, Humidity, Light Spectrum, Growth Cycle, PH (H20), & Nutrient Levels
+                <Icon>devices</Icon>
+                Platform provides real-time monitoring of all growth levels including: 
+                Temperature, Humidity, Light Spectrum, Growth Cycle, PH (H20), & Nutrient Levels
             </Slide>
             <Slide
                 title="Biome Selector"
                 placement="left">
-                Here's our small slogan.
+                <Icon>terrain</Icon>
+                Biome Selector provides an easy way to set the environmental perameters for your growth cycle. 
+                Pre-Set Biomes Include: *Desert (10-20% Humidity), *Ocean (40-60% Humidity), *Forest (70-80% Humidity)
+
             </Slide>
             <Slide
                 title="Aeroponic Delivery"
                 placement="right">
-                Here's our small slogan.
+                <Icon>opacity</Icon>
+                Proprietary aeroponic nutriet delivery system improves uptake and shortens flowering times. 
             </Slide>
         </Slider>
         {/* <Col id="gauge" s={4}>
