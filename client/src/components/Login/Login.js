@@ -1,6 +1,12 @@
 import React from 'react'
 import { Icon, Col, Modal, Button, Row } from 'react-materialize';
 import './Login.css';
+import Dashboard from '../Dashboard/Dashboard'
+
+function pageChange(e) {
+    e.preventDefault();
+    window.location.assign('/Dashboard')
+}
 
 const Login = () => (
     <div>
@@ -23,6 +29,7 @@ const Login = () => (
                                     <a href="#!" className="modal-close waves-effect btn-flat">AGREE</a>
                                 </div>
                         </Col>
+
                 </Modal>
             </div>
         </Row>
