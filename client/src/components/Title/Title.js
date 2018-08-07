@@ -6,7 +6,7 @@ const Title = () => (
     <Row id="endorLogo">
         <Col className="zoomInDown" id="animated" s={12}>
             <h1 id="endorWord">
-                ENDOR [ <Icon className="material-icons">all_inclusive</Icon> ]
+                ENDOR [ <Icon className="infin">all_inclusive</Icon> ]
             </h1>
             <h5>Life Systems</h5>
         </Col>

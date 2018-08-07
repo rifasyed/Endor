@@ -9,6 +9,7 @@ import RTChart from './components/RTChart';
 import Auth from './components/Auth';
 import ChartRoute from './components/ChartRoute'
 import Switch from './components/Switch'
+import UserSettings from './components/UserSettings'
 // import DashChart1 from './components/DashChart1';
 
 // import './App.css';
@@ -31,6 +32,7 @@ class App extends Component {
             <Route exact path="/auth" component={Auth} />
             <Route exact path="/route" component={ChartRoute} />
             <Route exact path="/switch" component={Switch} />
+            <Route exact path="/usersettings" component={UserSettings} />
           </div>
         </Router>
       </Fragment>
