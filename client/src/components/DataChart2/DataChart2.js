@@ -7,41 +7,26 @@ import axios from 'axios'
 class DataChart2 extends Component {
   state = {
     labels: ['Temp 1', 'Temp 2', 'Humidity', 'Water'],
-    dateArr: {},
-    timeArr: {},
-    tempArr: {}
-  };
+    dateArr: [],
+    timeArr: [],
+    tempArr: []
+  }
+
 
   componentDidMount() {
     this.getData()
 
     this.interval = setInterval(this.getData, 10000)
-  };
-
-  getDate = () => {
-    // const date = this.state.dateArr 
-    this.setState(
-      {
-        dateArr: {
-          label: [
-            'Date'
-          ],
-          datasets: [{
-            data: []
-          }]
-        }
-      }
-    )
-  };
+  }
 
   getData = () => {
     let dateArr = this.state.dateArr
     let timeArr = this.state.timeArr
     let tempArr = this.state.tempArr
-    axios.get('/data')
+    axios.get('/data2')
       .then(r => {
         for (let i = 0; i < r.data.length; i++) {
-          dateArr.push(r.data[i].date)
+          dateArr.push(r.data[i].dat)
           timeArr.push(r.data[i].time)
           tempArr.push(r.data[i].temperature)
           console.log("this is " + r.data[i].time)
@@ -55,10 +40,9 @@ class DataChart2 extends Component {
 
   render() {
     return (
-      <Fragment>  
+      <Fragment>
         <div className="chartBG">
           <ul className="dataCard">
-
             {this.state.dateArr.map(r =>
               <li>{r}</li>
             )}
