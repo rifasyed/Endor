@@ -1,0 +1,34 @@
+.usersettingsBG {
+    background-image: url('../../assets/cliffs.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    font-weight: bold;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.material-icons {
+    font-size: 40px;
+    padding: none;
+}
+
+.userheading {
+    font-size: 22px;
+}
+
+
+#plSel {
+    position: relative;
+    top: 20px;
+
+}
+
+#bSel {
+    padding-top: 20px;
+}
+
+.formBG {
+    background-color: rgba(0, 0, 0, 0.39);
+    height: 45%;
+}

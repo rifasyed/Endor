@@ -1,0 +1,15 @@
+
+img, .slides {
+    background-color: rgba(26, 26, 26, 0.075) !important;
+}
+
+.slider {
+    bottom: 280px;
+    position: relative;
+}
+
+
+ 
+  .indicator-item.active {
+      background-color: rgb(150, 3, 3) !important;
+  }
