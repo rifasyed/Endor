@@ -9,6 +9,8 @@ import RTChart from './components/RTChart';
 import Auth from './components/Auth';
 import ChartRoute from './components/ChartRoute'
 import Switch from './components/Switch'
+import DataChart from './components/DataChart'
+import Test from './components/DataTest/DataChartTest'
 // import DashChart1 from './components/DashChart1';
 
 // import './App.css';
@@ -31,6 +33,8 @@ class App extends Component {
             <Route exact path="/auth" component={Auth} />
             <Route exact path="/route" component={ChartRoute} />
             <Route exact path="/switch" component={Switch} />
+            <Route exact path="/data" component={DataChart} />
+            <Route exact path="/test" component={Test} />
           </div>
         </Router>
       </Fragment>

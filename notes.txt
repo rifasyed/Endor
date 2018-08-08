@@ -4,5 +4,5 @@ I HATE MY LIFE- Rifa ^_^
 
 have data returning in cards
 chart pulling real data
-tabs opening new div
+// tabs opening new div
 login => dashboard
