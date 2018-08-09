@@ -6,3 +6,9 @@ have data returning in cards
 chart pulling real data
 // tabs opening new div
 login => dashboard
+
+
+// fogcontroller
+// fancontroller
+// therm1
+// therm2

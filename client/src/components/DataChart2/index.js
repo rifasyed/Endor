@@ -1,0 +1,1 @@
+export { default } from './DataChart2.js'

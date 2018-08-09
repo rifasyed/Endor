@@ -1,18 +1,18 @@
-var _ = require('lodash')
-var axios = require('axios')
 var five = require('johnny-five');
 var fs = require('fs');
-var mongoose = require("mongoose");
-var moment = require('moment');
+var _ = require('lodash')
+var axios = require('axios')
+var logStream = fs.createWriteStream('log.txt', { 'flags': 'a' });
+var logStream2 = fs.createWriteStream('log2.txt', { 'flags': 'a' });
 var board = new five.Board();
-var logStream = fs.createWriteStream('../log.txt', { 'flags': 'a' });
-var logStream2 = fs.createWriteStream('../log2.txt', { 'flags': 'a' });
+var mongoose = require("mongoose");
 var Temp1 = require('../models/tempModel');
 var Temp2 = require('../models/tempModel');
+var moment = require('moment')
 
 
-module.exports = function() {
-function airPumpOn() {
+module.exports = function () {
+  function airPumpOn() {
     var relayFog = new five.Relay(7);
     relayFog.on();
   }

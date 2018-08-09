@@ -27,7 +27,7 @@ class DataChart extends Component {
     axios.get('/data')
       .then(r => {
         for (let i = 0; i < r.data.length; i++) {
-          dateArr.push(r.data[i].dat)
+          dateArr.push(r.data[i].date)
           timeArr.push(r.data[i].time)
           tempArr.push(r.data[i].temperature)
           console.log("this is " + r.data[i].time)
