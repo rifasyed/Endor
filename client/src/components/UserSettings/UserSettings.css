@@ -2,35 +2,16 @@
     background-image: url('../../assets/cliffs.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     color: white;
     font-weight: bold;
     font-family: 'Exo 2', sans-serif;
 }
 
-.material-icons {
-    font-size: 40px;
-    padding: none;
-}
-
-.userheading {
-    font-size: 22px;
-}
-
-
-#plSel {
-    position: relative;
-    top: 20px;
-
-}
-
-#bSel {
-    padding-top: 20px;
-}
-
 .formBG {
     background-color: rgba(0, 0, 0, 0.39);
-    height: 80%;
+    margin: 30px 65px 0 65px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .finishBTN {
@@ -42,12 +23,25 @@
     margin: 15px auto;
     text-align: center; 
     font-weight: bold;
+    length: 100px;
+    height: 50px;
 }
 .finishBTN:hover,
 .finishBTN:after {
     background-color: rgba(138, 138, 138, 0.212) !important; 
 }
 
-.dropdown-content {
+/* .dropdown-content {
     color: #a00800 !important;
+} */
+
+.testC {
+    margin-top: 35px;
+}
+.testB {
+    margin-top: 60px;
+}
+.testA {
+    margin-top: 62px;
+    margin-bottom: 210px;
 }
