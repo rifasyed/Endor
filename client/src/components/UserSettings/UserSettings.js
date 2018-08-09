@@ -59,6 +59,7 @@ const UserSettings = () => (
                             <option value='3'>7</option>
                             <option value='3'>8</option>
                         </Input>
+
                         <Input s={6} type='select' label="Flowering Period (in weeks)">
                             <option value='1'>8</option>
                             <option value='2'>9</option>
