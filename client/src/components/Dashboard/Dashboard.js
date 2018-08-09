@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, CardPanel, CardTitle, SideNav, SideNavItem, Button, Icon, Input } from 'react-materialize'
+import { Row, Col, Card, CollectionItem, CardPanel, CardTitle, SideNav, SideNavItem, Button, Icon, Input } from 'react-materialize'
 // import { DrawerNavigator} from 'react-navigation'
 import ChartJS from '../Chart/ChartJS';
 import DataChart from '../DataChart/DataChart';
@@ -32,6 +32,18 @@ const Dashboard = () => (
           }}
         />
         <SideNavItem onClick={pageChange}>Switches</SideNavItem>
+        <SideNavItem onClick={pageChange}>UserSettings</SideNavItem>
+        {/* ***!!i am not sure how to adjust your function so that 
+        it doesnt go to the same link every time!!*** */}
+        <SideNavItem>
+          <CollectionItem>Project Name: </CollectionItem>
+          <CollectionItem>Plant Type: </CollectionItem>
+          <CollectionItem>Biome Type: </CollectionItem>
+          <CollectionItem>Vegetative Cycle: </CollectionItem>
+          <CollectionItem>Flowering Cycle:</CollectionItem>
+          <CollectionItem>Vegetative Period: </CollectionItem>
+          <CollectionItem>Flowering Period: </CollectionItem>
+        </SideNavItem>
       </SideNav>
       <Col m={12} s={12}>
         {/* <Row>
