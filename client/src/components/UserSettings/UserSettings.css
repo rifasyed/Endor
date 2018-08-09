@@ -12,6 +12,7 @@
     background-color: rgba(0, 0, 0, 0.39);
     margin: 30px 65px 0 65px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* background-image: url('../../assets/black.jpg'), rgba(0, 0, 0, 0.452); */
 }
 
 .finishBTN {
